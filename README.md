@@ -48,6 +48,10 @@ should be fully responsive and accessible from all devices and screen sizes.
 ### User Stories
 ### Design Decisions
 #### Fonts
+The chosen font for this project was <a href="https://fonts.google.com/specimen/Inconsolata?query=inc">Inconsolata which was provided by Google fonts.</a>
+This is a monospaced font, which were widely used in earlier computers. Based on this, it gave an authentic old school feel
+to the quiz app, which is why it was selected for this project.
+
 #### Icons
 #### Colours
 * **Primary: #27496d "Dark Navy"** - This colour will be shown as the background throughout the game. It is quite a dark colour
