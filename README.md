@@ -62,6 +62,12 @@ navy inspired palette</a> was chosen for colours throughout the website.
 
 ### Technologies Used
 #### Languages
+* <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>
+* <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>
+* <a href="https://www.w3schools.com/js/">JavaScript</a>
+
+
+
 #### Libraries and Tools
 * <a href="https://getbootstrap.com/">Bootstrap</a>
 * <a href="https://fonts.google.com/">Google Fonts</a>
