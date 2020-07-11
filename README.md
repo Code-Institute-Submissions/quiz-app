@@ -32,6 +32,12 @@ who wishes to use it. If you have any questions, please feel free to reach out a
 
 ## UX 
 ### Overall Project Goals 
+
+The overall objective of this project is to **provide users with an enjoyable and educational quiz app** that can be easily accessed online. 
+This website should be easy to navigate, providing users with a seamless experience as they move from question to question. The website
+should be fully responsive and accessible from all devices and screen sizes. 
+
+
 ### User Goals
 ### User Stories
 ### Design Decisions
