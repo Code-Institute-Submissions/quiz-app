@@ -46,6 +46,16 @@ should be fully responsive and accessible from all devices and screen sizes.
 * Use the website across all screen sizes, from desktop to mobile. **Fully responsive design**.
 
 ### User Stories
+Each of the following user stories contributed to the design of the website, to ensure the user had the most effortless experience;
+* As a user I would expect to be able to **see my progress as I worked through the questions presented on screen.** This was achieved by
+incorporating a progress bar into the design of the quiz. 
+* As a user I would enjoy seeing **high scores on the leaderboard for the quiz**. This was achieved by adding a high scores section
+that each user can click into. 
+* As a user I would expect to be able to **see each potential multi choice answer clearly**, so I could confidently
+select whichever option I thought was correct. This was achieved through the design of the multichoice answers, where each
+option had a clear border and was labelled A, B, C or D, depending on it's position. 
+* As a user I would expect the **multiple choice options to display in random order each time**, i.e. don't show the correct answer
+in the same position each time. Logic was implemented to achieve random order for each question displayed.
 
 ### Design Decisions
 #### Fonts
