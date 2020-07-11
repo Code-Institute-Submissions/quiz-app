@@ -50,6 +50,11 @@ should be fully responsive and accessible from all devices and screen sizes.
 #### Fonts
 #### Icons
 #### Colours
+* **Primary: #27496d "Dark Navy"** - This colour will be shown as the background throughout the game. It is quite a dark colour
+which is paired with white text to allow contrast for readability. 
+* **Secondary: #00909e** - This is a dark turqioise, which compliments the dark navy. 
+* Inspiration was taken here from the online tool <a href="https://colorhunt.co/">Color Hunt</a>, where <a href="https://colorhunt.co/palette/180289">this dark 
+navy inspired palette</a> was chosen for colours throughout the website.
 
 ### Technologies Used
 #### Languages
