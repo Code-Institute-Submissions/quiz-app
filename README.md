@@ -43,15 +43,15 @@ who wishes to use it. If you have any questions, please feel free to reach out a
 #### Languages
 #### Libraries and Tools
 
-### Testing
+## Testing
 
-### Bugs
+## Bugs
 
-### Deployment
+## Deployment
 
-### Closing Notes
+## Closing Notes
 
-### Credits 
+## Credits 
 
-### Copyright and Disclaimer
+## Copyright and Disclaimer
 
