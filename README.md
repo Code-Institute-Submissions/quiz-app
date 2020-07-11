@@ -46,6 +46,7 @@ should be fully responsive and accessible from all devices and screen sizes.
 * Use the website across all screen sizes, from desktop to mobile. **Fully responsive design**.
 
 ### User Stories
+
 ### Design Decisions
 #### Fonts
 The chosen font for this project was <a href="https://fonts.google.com/specimen/Inconsolata?query=inc">Inconsolata which was provided by Google fonts.</a>
@@ -67,22 +68,21 @@ navy inspired palette</a> was chosen for colours throughout the website.
 * <a href="https://www.w3schools.com/js/">JavaScript</a>
 
 
-
 #### Libraries and Tools
 * <a href="https://getbootstrap.com/">Bootstrap</a>
 * <a href="https://fonts.google.com/">Google Fonts</a>
 * <a href="https://git-scm.com/">Git</a>
 * <a href="https://colorhunt.co/">Color Hunt</a>
 
-## Testing
+### Testing
 
-## Bugs
+### Bugs
 
-## Deployment
+### Deployment
 
-## Closing Notes
+### Closing Notes
 
-## Credits 
+### Credits 
 
-## Copyright and Disclaimer
+### Copyright and Disclaimer
 This website was originally built for education purposes only.
