@@ -79,4 +79,4 @@ navy inspired palette</a> was chosen for colours throughout the website.
 ## Credits 
 
 ## Copyright and Disclaimer
-
+This website was originally built for education purposes only.
