@@ -26,5 +26,32 @@ who wishes to use it. If you have any questions, please feel free to reach out a
 * [Credits](#credits)
 * [Copyright and Disclaimer](#copyright-and-disclaimer)
 
+## Planning 
+### Wireframes
+### Flowchart
 
+## UX 
+### Overall Project Goals 
+### User Goals
+### User Stories
+### Design Decisions
+#### Fonts
+#### Icons
+#### Colours
+
+### Technologies Used
+#### Languages
+#### Libraries and Tools
+
+### Testing
+
+### Bugs
+
+### Deployment
+
+### Closing Notes
+
+### Credits 
+
+### Copyright and Disclaimer
 
