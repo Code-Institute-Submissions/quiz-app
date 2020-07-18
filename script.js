@@ -68,8 +68,9 @@ nextQuestion = () => {
     readyForAnswers = true;
 };
 
-// Add functionality to for next question
-options.forEach((option) => { // Add click event listener to each choice
+// Add functionality to for next question 
+
+options.forEach(option => { // Add click event listener to each choice
     option.addEventListener('click', (e) => { // 
         if (!readyForAnswers) return; // Ignore clicks if too early
 
@@ -78,12 +79,16 @@ options.forEach((option) => { // Add click event listener to each choice
         const selectedAnswer = selectedOption.dataset['number'];
 
 
-        let applyClass = selectedAnswer === currentQuestion.answer ? 'correct' : 'incorrect'; //check if the answers are correct
-          console.log(applyClass);
+        const applyClass = selectedAnswer == currentQuestion.answer ? "right" : "wrong"; //check if the answers are correct
 
-        nextQuestion();
-    });
-});
+        selectedOption.parentElement.classList.add(applyClass); // Select parent container and apply class
+
+        setTimeout(() => {
+            selectedOption.parentElement.classList.remove(applyClass); // Remove class
+            nextQuestion();
+        }, 1000);
+  });
+}); 
 
 
 startQuiz();
