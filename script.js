@@ -43,8 +43,8 @@ const questionLimit = 3; // Limits no. of questions per game
 
 // Arrow functions to start game
 startGame = () => {
-    questionCounter = 0;
+    counter = 0;
     userScore = 0;
-    availableQuestions = [...questions]; // Copy all qs from question array using spread operator
+    remainingQuestions = [...questions]; // Copy all qs from question array using spread operator
     getNewQuestion();
 };
