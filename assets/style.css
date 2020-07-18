@@ -18,4 +18,16 @@ h2 {
     font-size: 1.5rem;
 }
 
+a {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    padding: 6px;
+    
+}
+
+a:hover {
+    background-color: #00909e;
+}
+
 
