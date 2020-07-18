@@ -40,3 +40,11 @@ let questions = [
 // Set constants for game
 const addPoints = 15;// When you get a correct answer it adds points
 const questionLimit = 3; // Limits no. of questions per game
+
+// Arrow functions to start game
+startGame = () => {
+    questionCounter = 0;
+    userScore = 0;
+    availableQuestions = [...questions]; // Copy all qs from question array using spread operator
+    getNewQuestion();
+};
