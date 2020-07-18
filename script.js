@@ -1,6 +1,6 @@
 // Select questions and choices
 const question = document.querySelector('#question');
-const options = Array.from(document.querySelectorAll('.option-text'));
+const choices = Array.from(document.querySelectorAll('.choice-text'));
 
 // Create variables
 let currentQuestion = {};
@@ -59,5 +59,13 @@ nextQuestion = () => {
     currentQuestion = remainingQuestions[questionNumber]; 
     question.innerText = currentQuestion.question;
 
+    choices.forEach((choice) => { // iterate through each choice
+        const number = choice.dataset['number']; // reference dataset number ??
+        choice.innerText = currentQuestion['choice' + number]; // ??
+    });
 
+    remainingQuestions.splice(questionNumber, 1); // Remove used question from array
+    readyForAnswers = true;
 };
+
+startQuiz();
