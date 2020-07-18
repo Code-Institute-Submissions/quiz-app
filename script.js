@@ -1,4 +1,4 @@
-// Select questions and choices
+// Select questions and options
 const question = document.querySelector('#question');
 const options = Array.from(document.querySelectorAll('.choice-text'));
 
@@ -67,5 +67,18 @@ nextQuestion = () => {
     remainingQuestions.splice(questionNumber, 1); // Remove used question from array
     readyForAnswers = true;
 };
+
+// Add functionality to for next question
+options.forEach((option) => { // Add click event listener to each choice
+    option.addEventListener('click', (e) => { // 
+        if (!readyForAnswers) return; // Ignore clicks if too early
+
+        readyForAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+        nextQuestion();
+    });
+});
+
 
 startQuiz();
