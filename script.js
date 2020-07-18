@@ -42,9 +42,22 @@ const addPoints = 15;// When you get a correct answer it adds points
 const questionLimit = 3; // Limits no. of questions per game
 
 // Arrow functions to start game
-startGame = () => {
+startQuiz = () => {
     counter = 0;
     userScore = 0;
     remainingQuestions = [...questions]; // Copy all qs from question array using spread operator
-    getNewQuestion();
+    nextQuestion();
+};
+
+nextQuestion = () => {
+    if (remainingQuestions.length === 0 || counter >= questionLimit) {
+        //go to the end page
+        return window.location.assign('/end.html');
+    }
+    counter++; // Increment by 1 when game is started
+    const questionNumber = Math.floor(Math.random() * remainingQuestions.length); // Find a random number among the no. of available questions
+    currentQuestion = remainingQuestions[questionNumber]; 
+    question.innerText = currentQuestion.question;
+
+
 };
