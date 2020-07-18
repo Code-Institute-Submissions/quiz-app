@@ -74,8 +74,13 @@ options.forEach((option) => { // Add click event listener to each choice
         if (!readyForAnswers) return; // Ignore clicks if too early
 
         readyForAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
+        const selectedOption = e.target;
+        const selectedAnswer = selectedOption.dataset['number'];
+
+
+        let applyClass = selectedAnswer === currentQuestion.answer ? 'correct' : 'incorrect'; //check if the answers are correct
+          console.log(applyClass);
+
         nextQuestion();
     });
 });

@@ -63,6 +63,14 @@ a:hover {
     padding: 2px;
 }
 
+.right {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
 
 
 
