@@ -30,4 +30,19 @@ a:hover {
     background-color: #00909e;
 }
 
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+
+
+.choice-container:hover {
+    background-color: #00909e;
+}
+
+
 
