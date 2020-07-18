@@ -39,10 +39,30 @@ a:hover {
     text-align: center;
 }
 
-
 .choice-container:hover {
     background-color: #00909e;
 }
+
+.choice-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    padding: 1px;
+    margin: 6px;
+}
+
+.choice-prefix {
+    padding: 2px;
+   
+}
+
+.choice-text {
+    padding: 2px;
+}
+
 
 
 
