@@ -1,6 +1,8 @@
-// Select questions and options
+// Select qs and options
+
 const question = document.querySelector('#question');
 const options = Array.from(document.querySelectorAll('.choice-text'));
+
 
 // Create variables
 let currentQuestion = {};
@@ -42,14 +44,14 @@ const addPoints = 15;// When you get a correct answer it adds points
 const questionLimit = 3; // Limits no. of questions per game
 
 // Arrow functions to start game
-startQuiz = () => {
+const startQuiz = () => {
     counter = 0;
     userScore = 0;
     remainingQuestions = [...questions]; // Copy all qs from question array using spread operator
     nextQuestion();
 };
 
-nextQuestion = () => {
+const nextQuestion = () => {
     if (remainingQuestions.length === 0 || counter >= questionLimit) {
         //go to the end page
         return window.location.assign('/end.html');
@@ -79,14 +81,21 @@ options.forEach(option => { // Add click event listener to each choice
         const selectedAnswer = selectedOption.dataset['number'];
 
 
-        const applyClass = selectedAnswer == currentQuestion.answer ? "right" : "wrong"; //check if the answers are correct
+       //check if the answers are correct
+        let applyClass = "wrong";
+            if (selectedAnswer == currentQuestion.answer) {
+                applyClass = "right";
+            }
 
-        selectedOption.parentElement.classList.add(applyClass); // Select parent container and apply class
+        console.log(applyClass);
 
+         selectedOption.parentElement.classList.add(applyClass); // Select parent container and apply class
+
+        
         setTimeout(() => {
             selectedOption.parentElement.classList.remove(applyClass); // Remove class
             nextQuestion();
-        }, 1000);
+        }, 2000);
   });
 }); 
 
