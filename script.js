@@ -61,6 +61,9 @@ const nextQuestion = () => {
         return window.location.assign('/end.html');
     }
     counter++; // Increment by 1 when game is started
+    counter.innerText = `${counter}/${questionLimit}`; // Increment with each question
+
+
     const questionNumber = Math.floor(Math.random() * remainingQuestions.length); // Find a random number among the no. of available questions
     currentQuestion = remainingQuestions[questionNumber]; 
     question.innerText = currentQuestion.question;
