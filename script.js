@@ -96,6 +96,10 @@ options.forEach(option => { // Add click event listener to each choice
 
         console.log(applyClass);
 
+        if(applyClass === 'right') {
+            increaseScore(addPoints);
+        }
+
          selectedOption.parentElement.classList.add(applyClass); // Select parent container and apply class
 
         
@@ -106,5 +110,9 @@ options.forEach(option => { // Add click event listener to each choice
   });
 }); 
 
+increaseScore = number => {
+    userScore += number;
+    userScoreDisplay.innerText = userScore;
+}
 
 startQuiz();
