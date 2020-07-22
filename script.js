@@ -3,6 +3,10 @@
 const question = document.querySelector('#question');
 const options = Array.from(document.querySelectorAll('.choice-text'));
 
+// Create game info display
+const counterDisplay = document.getElementById('questionCounter');
+const userScoreDisplay = document.getElementById('userScore');
+
 
 // Create variables
 let currentQuestion = {};
