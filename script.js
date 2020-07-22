@@ -4,7 +4,7 @@ const question = document.querySelector('#question');
 const options = Array.from(document.querySelectorAll('.choice-text'));
 
 // Create game info display
-const counterDisplay = document.getElementById('questionCounter');
+const counterDisplay = document.getElementById('counter');
 const userScoreDisplay = document.getElementById('userScore');
 
 
@@ -61,7 +61,7 @@ const nextQuestion = () => {
         return window.location.assign('/end.html');
     }
     counter++; // Increment by 1 when game is started
-    counter.innerText = `${counter}/${questionLimit}`; // Increment with each question
+    counterDisplay.innerText = `${counter}/${questionLimit}`; // Increment with each question
 
 
     const questionNumber = Math.floor(Math.random() * remainingQuestions.length); // Find a random number among the no. of available questions
