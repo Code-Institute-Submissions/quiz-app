@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
 
+/*  General styles */ 
 html {
     font-size: 16px;
 }
@@ -18,7 +19,11 @@ h2 {
     font-size: 1.5rem;
 }
 
-a {
+/* Position styling */ 
+
+
+
+.button {
     color: #ffffff;
     border: 2px solid #ffffff;
     text-decoration: none;
