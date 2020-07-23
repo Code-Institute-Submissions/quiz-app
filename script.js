@@ -116,3 +116,6 @@ increaseScore = number => {
 }
 
 startQuiz();
+
+/* End page */ 
+
