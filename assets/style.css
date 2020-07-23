@@ -38,6 +38,8 @@ h2 {
     text-decoration: none;
     padding: 6px;
     margin: 1rem;
+    background-color: #27496d;background-color: #27496d;
+    font-family: 'Inconsolata', monospace;
 }
 
 a:hover {
