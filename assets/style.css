@@ -25,7 +25,9 @@ flex-container {
     display: flex; 
 }
 
-
+.justify {
+    justify-content: center;
+}
 
 
 .button {
