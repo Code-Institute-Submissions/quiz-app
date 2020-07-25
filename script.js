@@ -120,5 +120,10 @@ startQuiz();
 /* End page */ 
 
 const username = document.getElementById("username");
-const saveScore = document.getElementById("saveScore");
+const saveScore = document.getElementById("save-score");
+
+username.addEventListener("change", () => {
+    console.log(username.value);
+    saveScore.disabled = !username.value;
+});
 
