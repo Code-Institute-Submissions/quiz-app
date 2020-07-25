@@ -106,7 +106,7 @@ options.forEach(option => { // Add click event listener to each choice
         setTimeout(() => {
             selectedOption.parentElement.classList.remove(applyClass); // Remove class
             nextQuestion();
-        }, 2000);
+        }, 3000);
   });
 }); 
 
