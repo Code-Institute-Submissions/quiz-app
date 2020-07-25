@@ -9,14 +9,15 @@ body {
     background-color: #27496d;
     font-family: 'Inconsolata', monospace;
     color: #ffffff;
-}
-
-h1 {
     font-size: 2rem;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
 h2 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
 }
 
 /* Position styling */ 
@@ -36,10 +37,12 @@ h2 {
     color: #ffffff;
     border: 2px solid #ffffff;
     text-decoration: none;
-    padding: 6px;
-    margin: 1rem;
+    width: 15rem;
+    padding: 1rem;
+    margin: 0.5rem;
     background-color: #27496d;background-color: #27496d;
     font-family: 'Inconsolata', monospace;
+    font-size: 1.2rem;
 }
 
 a:hover {
@@ -88,7 +91,21 @@ a:hover {
 }
 
 
+/* End Page */
 
+
+form input {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    width: 12.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: #ffffff;
+    font-size: 1rem;
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+}
 
 
 
