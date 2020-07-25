@@ -57,6 +57,7 @@ const startQuiz = () => {
 
 const nextQuestion = () => {
     if (remainingQuestions.length === 0 || counter >= questionLimit) {
+        localStorage.setItem("lastScore", userScore);
         //go to the end page
         return window.location.assign('/end.html');
     }
@@ -121,6 +122,10 @@ startQuiz();
 
 const username = document.getElementById("username");
 const saveScore = document.getElementById("save-score");
+
+const lastScore = localStorage.getItem("lastScore");
+const endScore = document.getElementById("endScore");
+endScore.innerText = endScore;
 
 username.addEventListener("change", () => {
     console.log(username.value);
