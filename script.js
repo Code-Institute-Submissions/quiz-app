@@ -119,3 +119,6 @@ startQuiz();
 
 /* End page */ 
 
+const username = document.getElementById("username");
+const saveScore = document.getElementById("saveScore");
+
