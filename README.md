@@ -88,6 +88,10 @@ navy inspired palette</a> was chosen for colours throughout the website.
 
 ### Bugs
 
+Problem: When clicking the answer options they wouldn't always respond. If you clicked them, they would sometimes just highlight in grey but no action would be taken.
+Solution: It turned out that the click event was added to the actual p tag within the button, rather than the full button. The click event needed to be moved to the whole button.
+This way there would be a response, regardless of whether the user clicked the actual text or not, as long as it was in the button.
+
 ### Deployment
 
 ### Closing Notes

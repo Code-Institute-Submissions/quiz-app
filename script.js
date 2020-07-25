@@ -74,16 +74,16 @@ const nextQuestion = () => {
     });
 
     remainingQuestions.splice(questionNumber, 1); // Remove used question from array
-    readyForAnswers = true;
+    //readyForAnswers = true;
 };
 
 // Add functionality to for next question 
 
 options.forEach(option => { // Add click event listener to each choice
     option.addEventListener('click', (e) => { // 
-        if (!readyForAnswers) return; // Ignore clicks if too early
+        //if (!readyForAnswers) return; // Ignore clicks if too early
 
-        readyForAnswers = false;
+        //readyForAnswers = false;
         const selectedOption = e.target;
         const selectedAnswer = selectedOption.dataset['number'];
 
@@ -96,7 +96,7 @@ options.forEach(option => { // Add click event listener to each choice
 
         console.log(applyClass);
 
-        if(applyClass === 'right') {
+        if(applyClass === "right") {
             increaseScore(addPoints);
         }
 
