@@ -9,6 +9,9 @@ const endScore = document.getElementById("endScore");
 const lastScore = localStorage.getItem("lastScore");
 endScore.innerText = lastScore;
 
+//convert local storage from string to object
+const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
+console.log(highScore);
 
 username.addEventListener("change", () => {
     console.log(username.value);
@@ -17,6 +20,14 @@ username.addEventListener("change", () => {
 
 
 saveScore = function(e) {
-    console.log("clicked the save button");
+    console.log("Clicked save");
     e.preventDefault();
+
+    const score = {
+    score: lastScore,
+    name: username.value
 };
+highScore.push(score);
+console.log(highScore);
+};
+
