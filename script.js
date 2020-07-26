@@ -57,7 +57,7 @@ const startQuiz = () => {
 
 const nextQuestion = () => {
     if (remainingQuestions.length === 0 || counter >= questionLimit) {
-        //localStorage.setItem("lastScore", userScore);
+        localStorage.setItem("lastScore", userScore);
         //go to the end page
         return window.location.assign('/end.html');
     }

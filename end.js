@@ -1,7 +1,14 @@
 /* End page */ 
 
 const username = document.getElementById("username");
-const submitScoreClick = document.getElementById("submitScoreClick")
+const submitScoreClick = document.getElementById("submitScoreClick");
+const endScore = document.getElementById("endScore");
+
+// update score text 
+
+const lastScore = localStorage.getItem("lastScore");
+endScore.innerText = lastScore;
+
 
 username.addEventListener("change", () => {
     console.log(username.value);
