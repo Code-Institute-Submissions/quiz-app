@@ -49,4 +49,15 @@ console.log(highScore);
 };
 
 
+/* High Score page */ 
 
+const scoreList = document.getElementById("scoreList");
+const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
+
+console.log(highScore);
+
+scoresList.innerHTML = highScore
+  .map(score => {
+    return `<li class="high-score">${score.name} - ${score.score}</li>`;
+  })
+  .join("");

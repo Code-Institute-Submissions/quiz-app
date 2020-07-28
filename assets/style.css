@@ -33,7 +33,7 @@ h2 {
   align-items: center;
 }
 
-.button {
+.button, a {
     color: #ffffff;
     border: 2px solid #ffffff;
     text-decoration: none;
