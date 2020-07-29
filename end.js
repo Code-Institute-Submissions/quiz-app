@@ -9,10 +9,8 @@ endScore.innerText = lastScore;
 
 //const MAX_HIGH_SCORES = 5;
 
-
-
 username.addEventListener("keyup", () => {
-    lastScore.disabled = !username.value;
+    submitScoreClick.disabled = !username.value;
     console.log(username.value);
 }); 
 
