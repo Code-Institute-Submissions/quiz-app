@@ -1,16 +1,18 @@
 const username = document.getElementById('username');
 const submitScoreClick = document.getElementById('submitScoreClick');
-const finalScore = document.getElementById('finalScore');
-const mostRecentScore = localStorage.getItem('mostRecentScore');
+const endScore = document.getElementById('endScore');
+const lastScore = localStorage.getItem('lastScore');
+
+endScore.innerText = lastScore;
 
 //const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 //const MAX_HIGH_SCORES = 5;
 
-//finalScore.innerText = mostRecentScore;
+
 
 username.addEventListener("keyup", () => {
-    submitScoreClick.disabled = !username.value;
+    lastScore.disabled = !username.value;
     console.log(username.value);
 }); 
 
