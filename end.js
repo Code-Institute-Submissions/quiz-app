@@ -3,11 +3,11 @@ const submitScoreClick = document.getElementById('submitScoreClick');
 const endScore = document.getElementById('endScore');
 const lastScore = localStorage.getItem('lastScore');
 
-//convert to JSON
-localStorage.setItem("highScores", JSON.stringify([]));
+//et reference to high scores, pull what is in local storage and convert to JSON, if nothing there then reference empty array
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [] ;
+console.log(highScores);
 
-// convert to array
-console.log(JSON.parse(localStorage.getItem("highScores")));
+
 endScore.innerText = lastScore;
 
 //const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
@@ -21,16 +21,7 @@ username.addEventListener("keyup", () => {
 
 saveScore = e => {
     console.log("clicked save");
-    //e.preventDefault();
-
-    /*const score = {
-        score: mostRecentScore,
-        name: username.value,
-    };
-    highScores.push(score);
-    highScores.sort((a, b) => b.score - a.score);
-    highScores.splice(5);
-
-    localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('/'); */
+    e.preventDefault();
+  
+     
 };
