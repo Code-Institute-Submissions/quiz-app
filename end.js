@@ -7,6 +7,7 @@ const lastScore = localStorage.getItem('lastScore');
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [] ;
 console.log(highScores);
 
+const maxScores = 5;
 
 endScore.innerText = lastScore;
 
@@ -26,8 +27,8 @@ saveScore = e => {
 
     highScores.push(score); //push through the score to HighScores array
 
-    // Only push top 5 to the high score list
-    highScores.sort( (a,b) => { // sort these in highest to lowest, by taking the b score and subtracting a score - if b score is higher than a, then put b before a
+    // sort scores in highest to lowest, by taking the b score and subtracting a score - if b score is higher than a, then put b before a
+    highScores.sort( (a,b) => { 
         return b.score - a.score;
     })
 
