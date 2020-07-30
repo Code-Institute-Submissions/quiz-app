@@ -3,6 +3,9 @@ const submitScoreClick = document.getElementById('submitScoreClick');
 const endScore = document.getElementById('endScore');
 const lastScore = localStorage.getItem('lastScore');
 
+//convert to JSON
+localStorage.setItem("highScores", JSON.stringify([]));
+
 endScore.innerText = lastScore;
 
 //const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
