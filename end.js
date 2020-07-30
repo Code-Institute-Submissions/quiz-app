@@ -1,52 +1,50 @@
-/* End page */ 
+const username = document.getElementById('username');
+const submitScoreClick = document.getElementById('submitScoreClick');
+const endScore = document.getElementById('endScore');
+const lastScore = localStorage.getItem('lastScore');
 
-const username = document.getElementById("username");
-const submitScoreClick = document.getElementById("submitScoreClick");
-const endScore = document.getElementById("endScore");
+//et reference to high scores, pull what is in local storage and convert to JSON, if nothing there then reference empty array
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [] ;
+console.log(highScores);
 
-const highScoreLimit = 5;
+const maxScores = 5;
 
-// update score text 
-
-const lastScore = localStorage.getItem("lastScore");
 endScore.innerText = lastScore;
 
-//convert local storage from string to object
-const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
-console.log(highScore);
-
-username.addEventListener("change", () => {
-    console.log(username.value);
+username.addEventListener("keyup", () => {
     submitScoreClick.disabled = !username.value;
-});
+    console.log(username.value);
+}); 
 
-
-saveScore = function(e) {
-    console.log("Clicked save");
+saveScore = e => {
+    console.log("clicked save");
     e.preventDefault();
-
+  
     const score = {
-    score: lastScore,
-    name: username.value
-};
-highScore.push(score);
+        score: lastScore,
+        name: username.value
+    };
 
-// Use only top 5 scores for list. Add score to array, splice after 5 and then sort in order. 
+    highScores.push(score); //push through the score to HighScores array
 
-highScore.sort((a,b) => b.score - a.score)
+    // sort scores in highest to lowest, by taking the b score and subtracting a score - if b score is higher than a, then put b before a
+    highScores.sort( (a,b) => { 
+        return b.score - a.score;
+    })
 
-// Stop after 5th score
-highScore.splice(5);
+    // cut after 5 scores 
+    highScores.splice(5);
 
-// Update local storage with high scores, need to convert to JSON so we can save as string in high scores
-localStorage.setItem("highScore",JSON.stringify(highScore));
-
-//Return home
-window.location.assign("index.html");
-
-
-console.log(highScore);
-};
-
-
+<<<<<<< HEAD
 /* High Score page */ 
+=======
+    // update local storage with high scores
+
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    window.location.assign("index.html");
+
+    console.log(highScores);
+
+    
+};
+>>>>>>> highscore-page
