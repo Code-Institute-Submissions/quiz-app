@@ -1,13 +1,17 @@
 /* High Score page */ 
 
-const highScoresList = document.getElementById("highScoresList");
+// reference scores list
+const scoresList = document.getElementById("scoresList");
+
+//get high scores out of local storage
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 console.log(highScores);
 
-highScoresList.innerHTML = highScores
-  .map(score => {
+// iterate through each high score and add list elements with username and score inside of it
+
+console.log (
+    highScores.map( score =>{
     return `<li class="high-score">${score.name} - ${score.score}</li>`;
-  })
-  .join("");
+}));
 
