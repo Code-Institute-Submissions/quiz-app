@@ -32,5 +32,8 @@ saveScore = e => {
         return b.score - a.score;
     })
 
+    // cut after 5 scores 
+    highScores.splice(5);
+
     console.log(highScores);
 };
