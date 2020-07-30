@@ -35,5 +35,12 @@ saveScore = e => {
     // cut after 5 scores 
     highScores.splice(5);
 
+    // update local storage with high scores
+
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    window.location.assign("index.html");
+
     console.log(highScores);
+
+    
 };
