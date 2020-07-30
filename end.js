@@ -6,6 +6,8 @@ const lastScore = localStorage.getItem('lastScore');
 //convert to JSON
 localStorage.setItem("highScores", JSON.stringify([]));
 
+// convert to array
+console.log(JSON.parse(localStorage.getItem("highScores")));
 endScore.innerText = lastScore;
 
 //const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
