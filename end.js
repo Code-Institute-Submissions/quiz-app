@@ -10,10 +10,6 @@ console.log(highScores);
 
 endScore.innerText = lastScore;
 
-//const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-
-//const MAX_HIGH_SCORES = 5;
-
 username.addEventListener("keyup", () => {
     submitScoreClick.disabled = !username.value;
     console.log(username.value);
