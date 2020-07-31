@@ -35,9 +35,6 @@ saveScore = e => {
     // cut after 5 scores 
     highScores.splice(5);
 
-<<<<<<< HEAD
-/* High Score page */ 
-=======
     // update local storage with high scores
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
@@ -47,4 +44,3 @@ saveScore = e => {
 
     
 };
->>>>>>> highscore-page
