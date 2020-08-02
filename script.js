@@ -47,9 +47,34 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
 .then( result => {
     return result.json();
 })
-.then(loadedQuestions => {
-    console.log(loadedQuestions);
-})
+.then((apiQuestions) => {
+        questions = apiQuestions.results.map((apiQuestion) => {
+            const currentQuestion = {
+                question: apiQuestion.question,
+            };
+
+            const answerOptions = [...apiQuestion.incorrect_answers];
+            currentQuestion.answer = Math.floor(Math.random() * 4) + 1;
+            answerOptions.splice(
+                currentQuestion.answer - 1,
+                0,
+                apiQuestion.correct_answer
+            );
+
+            answerOptions.forEach((choice, index) => {
+                currentQuestion['choice' + (index + 1)] = choice;
+            });
+
+            return currentQuestion;
+        });
+        startQuiz();
+    })
+    .catch((err) => {
+        console.error(err);
+    });
+
+
+
 
 // Set constants for game
 const addPoints = 15;// When you get a correct answer it adds points
