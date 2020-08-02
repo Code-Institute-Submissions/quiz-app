@@ -16,7 +16,7 @@ let counter = 0;
 let remainingQuestions = []; // allows new question to be given to player each time
 
 // Hard coded questions stored in objects
-let questions = [
+/*let questions = [
     {
         question: "Grand Central Terminal, Park Avenue, New York is the worlds...",
         choice1: "Largest railway station",
@@ -41,7 +41,15 @@ let questions = [
         choice4: "Military experiment gone wrong",
         answer: 3,
     },
-];
+];*/
+
+fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple")
+.then( result => {
+    return result.json();
+})
+.then(loadedQuestions => {
+    console.log(loadedQuestions);
+})
 
 // Set constants for game
 const addPoints = 15;// When you get a correct answer it adds points
