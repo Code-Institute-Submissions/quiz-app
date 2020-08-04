@@ -82,6 +82,11 @@ a:hover {
     padding: 2px;
 }
 
+.choice-letter {
+    padding: 0 5px;
+    font-weight: 800;
+}
+
 .right {
     background-color: green;
 }
