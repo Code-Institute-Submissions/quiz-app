@@ -9,15 +9,15 @@ body {
     background-color: #27496d;
     font-family: 'Inconsolata', monospace;
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 h2 {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
 }
 
 /* Position styling */ 
@@ -69,13 +69,13 @@ a:hover {
     color: #ffffff;
     border: 2px solid #ffffff;
     text-decoration: none;
-    padding: 1px;
+    padding: 5px;
     margin: 6px;
 }
 
 .choice-prefix {
     padding: 2px;
-   
+   float: left;
 }
 
 .choice-text {

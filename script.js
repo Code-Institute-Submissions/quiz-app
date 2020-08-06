@@ -39,18 +39,24 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
 
             return currentQuestion;
         });
+
+        console.log(questions);
+
+
         startQuiz();
     })
     .catch((err) => {
         console.error(err);
     });
 
+    
 
 
 
 // Set constants for game
 const addPoints = 15;// When you get a correct answer it adds points
 const questionLimit = 3; // Limits no. of questions per game
+
 
 // Arrow functions to start game
 const startQuiz = () => {
