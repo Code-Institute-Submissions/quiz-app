@@ -97,7 +97,7 @@ options.forEach(option => { // Add click event listener to each choice
 
         //readyForAnswers = false;
         const selectedOption = e.target;
-        debugger;
+        
         const selectedAnswer = selectedOption.dataset['number'];
 
 
