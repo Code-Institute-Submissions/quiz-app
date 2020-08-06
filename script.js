@@ -97,6 +97,7 @@ options.forEach(option => { // Add click event listener to each choice
 
         //readyForAnswers = false;
         const selectedOption = e.target;
+        debugger;
         const selectedAnswer = selectedOption.dataset['number'];
 
 
@@ -118,7 +119,7 @@ options.forEach(option => { // Add click event listener to each choice
         setTimeout(() => {
             selectedOption.parentElement.classList.remove(applyClass); // Remove class
             nextQuestion();
-        }, 3000);
+        }, 1000);
   });
 }); 
 
