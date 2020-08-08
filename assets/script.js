@@ -51,6 +51,18 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
         console.error(err);
     });
 
+// Hide and display HTML sections
+
+const startPageRef = document.querySelector('#start-page');
+const gamePageRef = document.querySelector('#game-page');
+const submitPageRef = document.querySelector('#submit-page');
+const highScorePageRef = document.querySelector('#high-score-page');
+
+const startPageClick = document.querySelector('#start-game');
+
+startPageClick.addEventListener("click", function(){
+  console.log("click event");
+});
 
 
 
