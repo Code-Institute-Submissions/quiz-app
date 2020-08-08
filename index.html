@@ -10,6 +10,8 @@
 </head>
 
 <body>
+
+<!--Start page -->
 <div class="container">
     <div id="home-page">
         <h1>Quiz</h1>
@@ -18,7 +20,63 @@
         <a id="nextQ" class="button" href="scores.html">High Scores</a>
     </div>
 </div>
+<!--End Start page -->
 
-<script type="text/javascript" src="scripts.js"></script>
+<!--Game Page-->
+
+<div class="container">
+      <div id="game">
+        <div id="game-info">
+          <div class="info-card">
+            <p class="info-type">
+              Question
+            </p>
+            <h1 class="info-text" id="counter"></h1>
+          </div>
+          <div class="info-card">
+            <p class="info-type">
+              Score
+            </p>
+            <h1 class=" info-text" id="userScore">
+              0
+            </h1>
+          </div>
+        </div>
+        <h2 id="question">What is the answer to this question?</h2>
+        <div class="choice-container">
+          <!--<p class="choice-letter">A</p>-->
+          <p class="choice-text" data-number="1">Option 1</p>
+        </div>
+        <div class="choice-container">
+          <!--<p class="choice-letter">B</p>-->
+          <p class="choice-text" data-number="2">Option 2</p>
+        </div>
+        <div class="choice-container">
+          <!--<p class="choice-letter">C</p>-->
+          <p class="choice-text" data-number="3">Option 3</p>
+        </div>
+        <div class="choice-container">
+          <!--<p class="choice-letter">D</p>-->
+          <p class="choice-text" data-number="4">Option 4</p>
+        </div>
+      </div>
+    </div>
+<!--End Game Page-->
+
+<!--End Page -->
+<div class="container">
+    <div class="center-columns">
+        <h1 id="endScore"></h1>
+        <form class="center-columns">
+            <input type="text" name="username" id="username" placeholder="Enter username">
+            <button type="submit" class="button" id="submitScoreClick" disabled>Submit</button>
+        </form>
+        <button type="button" class="button">Try Again</button>
+        <button type="button" class="button">Home</button>
+    </div>
+</div>
+<!-- End End Page -->
+
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
