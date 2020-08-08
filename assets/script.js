@@ -58,11 +58,15 @@ const gamePageRef = document.querySelector('#game-page');
 const submitPageRef = document.querySelector('#submit-page');
 const highScorePageRef = document.querySelector('#high-score-page');
 
-const startPageClick = document.querySelector('#start-game');
+const startGameClick = document.querySelector('#start-game-click');
 
-startPageClick.addEventListener("click", function(){
-  console.log("click event");
-});
+startGameClick.addEventListener("click", function(){
+    gamePageRef.classList.add("show");
+    startPageRef.classList.add("hide");
+    submitPageRef.classList.add("hide");
+    highScorePageRef.classList.add("hide");
+})
+
 
 
 
@@ -150,7 +154,7 @@ increaseScore = number => {
 const scoresList = document.getElementById("scoresList");
 
 //get high scores out of local storage
-debugger;
+
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 console.log(highScores);
