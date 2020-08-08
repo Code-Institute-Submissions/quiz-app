@@ -95,6 +95,13 @@ This way there would be a response, regardless of whether the user clicked the a
 Problem: When using the API, some characters are not appearing properly. For example, "world's" is appearing as "world&#039;s" . This happens throughout the questions, in situations 
 where commas or apostrophes are used. After some research, it turned out that this was because the HTML entities need to be decoded. 
 
+Problem: There was an error in the console that was appearing "Uncaught ReferenceError: questions is not defined at startQuiz (script.js:73), at script.js:139". 
+Solution: This was because there was a reference to questions when it had not been defined. This caused some confusion, as it was actually defined within the js file. However, I needed to 
+add it to the global scope. Based on this, I added an empty array titled questions, but this seemed to break functionality and the API questions were no longer pulling through. After a lot 
+of investigating with debugger tools, and some help from tutor support, we realised that it wasn't working because I called another function startQuiz at the end of my code, 
+which was running that function before the server returns the questions. This meant that when an if statement was checked, the questions did not return the intended value. 
+I removed the function from the end of the code, and placed it within the correct location. This did the trick!
+
 ### Deployment
 
 ### Closing Notes
