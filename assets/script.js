@@ -87,14 +87,6 @@ $('#home-click').click(function() {
 
 
 
-
-
-
-
-
-
-
-
 // Set constants for game
 const addPoints = 15;// When you get a correct answer it adds points
 const questionLimit = 3; // Limits no. of questions per game
@@ -113,7 +105,18 @@ const nextQuestion = () => {
     if (remainingQuestions.length === 0 || counter >= questionLimit) {
         localStorage.setItem("lastScore", userScore);
         //go to the end page
-        return window.location.assign('/end.html');
+        //return window.location.assign('index.html');
+
+        submitPage = () => {
+         $('#submit-page').show();
+         $('#high-score-page').hide();
+         $('#start-page').hide();
+         $('#game-page').hide();
+        }
+
+        submitPage();
+
+
     }
     counter++; // Increment by 1 when game is started
     counterDisplay.innerText = `${counter}/${questionLimit}`; // Increment with each question
@@ -196,7 +199,7 @@ scoresList.innerHTML = highScores
 
 /* Final page */
 const username = document.getElementById('username');
-//const submitScoreClick = document.getElementById('submitScoreClick');
+const submitScoreClick = document.getElementById('submit-score-click');
 const endScore = document.getElementById('endScore');
 const lastScore = localStorage.getItem('lastScore');
 
