@@ -102,6 +102,8 @@ of investigating with debugger tools, and some help from tutor support, we reali
 which was running that function before the server returns the questions. This meant that when an if statement was checked, the questions did not return the intended value. 
 I removed the function from the end of the code, and placed it within the correct location. This did the trick!
 
+Problem: On the page where you would select the answers to the question, there was a delay (separate from the delay above) when clicking the answers. 
+
 ### Deployment
 
 ### Closing Notes
