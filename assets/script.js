@@ -75,6 +75,9 @@ startGameClick.addEventListener("click", function(){
 
 
 
+
+
+
 // Set constants for game
 const addPoints = 15;// When you get a correct answer it adds points
 const questionLimit = 3; // Limits no. of questions per game
