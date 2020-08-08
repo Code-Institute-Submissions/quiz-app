@@ -15,6 +15,7 @@ let userScore = 0;
 let counter = 0;
 let remainingQuestions = []; // allows new question to be given to player each time
 
+
 fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple")
 .then( result => {
     return result.json();
@@ -48,8 +49,6 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
     .catch((err) => {
         console.error(err);
     });
-
-
 
 
 
