@@ -12,8 +12,8 @@
 <body>
 
 <!--Start page -->
-<div class="container" id="start-page">
-    <div>
+<div class="container">
+    <div id="start-page">
         <h1>Quiz</h1>
         <h2>Can you rise to the challenge?</h2>
         <a class="button" id="start-game-click">Start</a>
@@ -70,10 +70,10 @@
         <h1 id="endScore"></h1>
         <form class="center-columns">
             <input type="text" name="username" id="username" placeholder="Enter username">
-            <button type="submit" class="button" id="submitScoreClick" disabled>Submit</button>
+            <button type="submit" class="button" id="submit-score-Click" disabled>Submit</button>
         </form>
-        <button type="button" class="button">Try Again</button>
-        <button type="button" class="button">Home</button>
+        <button type="button" class="button" id="high-score-click">Try Again</button>
+        <button type="button" class="button" id="home-click">Home</button>
     </div>
 </div>
 <!-- End Submit Page -->
@@ -83,7 +83,7 @@
      <div id="high-score-page" class="center-columns">
         <h1 id="finalScore">High Scores</h1>
         <ul id="scoresList"></ul>
-        <a href="index.html">Home</a>
+        <a id="home-click">Home</a>
     </div>
 </div>
 <!--End Scores-->

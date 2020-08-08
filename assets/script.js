@@ -59,13 +59,18 @@ const submitPageRef = document.querySelector('#submit-page');
 const highScorePageRef = document.querySelector('#high-score-page');
 
 const startGameClick = document.querySelector('#start-game-click');
+const tryAgainClick = document.querySelector('#try-again-click');
+const submitScoreClick = document.querySelector('#submit-score-click');
+const homeClick = document.querySelector('#home-click');
+const highScoreClick = document.querySelector('#high-score-click');
 
 startGameClick.addEventListener("click", function(){
-    gamePageRef.classList.add("show");
-    startPageRef.classList.add("hide");
-    submitPageRef.classList.add("hide");
-    highScorePageRef.classList.add("hide");
+    gamePageRef.parentElement.classList.add("show");
+    startPageRef.parentElement.classList.add("hide");
+    submitPageRef.parentElement.classList.add("hide");
+    highScorePageRef.parentElement.classList.add("hide");
 })
+
 
 
 
@@ -171,7 +176,7 @@ scoresList.innerHTML = highScores
 
 /* Final page */
 const username = document.getElementById('username');
-const submitScoreClick = document.getElementById('submitScoreClick');
+//const submitScoreClick = document.getElementById('submitScoreClick');
 const endScore = document.getElementById('endScore');
 const lastScore = localStorage.getItem('lastScore');
 
