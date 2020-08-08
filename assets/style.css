@@ -122,3 +122,11 @@ form input {
 .high-score {
     margin: 0.5rem;
 }
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
