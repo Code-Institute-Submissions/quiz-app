@@ -54,7 +54,6 @@ a:hover {
 
 .container {
     width: 100vw;
-    height: 100vh;
     display: flex; 
     align-items: center;
     justify-content: center; 
@@ -132,3 +131,6 @@ form input {
     display: none;
 }
 
+#game-page, #submit-page, #high-score-page {
+    display: none;
+}
