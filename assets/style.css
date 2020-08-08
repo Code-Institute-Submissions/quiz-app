@@ -35,7 +35,7 @@ h2 {
 
 .button, a {
     color: #ffffff;
-    border: 2px solid #ffffff;
+    border: 0.2rem solid #ffffff;
     text-decoration: none;
     width: 15rem;
     padding: 1rem;
@@ -67,24 +67,24 @@ a:hover {
     justify-content: center;
     align-content: center;
     color: #ffffff;
-    border: 2px solid #ffffff;
+    border: 0.2rem solid #ffffff;
     text-decoration: none;
-    padding: 5px;
-    margin: 6px;
+    padding: 0.5rem;
+    margin: 0.7rem;
 }
 
 .choice-prefix {
-    padding: 2px;
+    padding: 0.2rem;
    float: left;
 }
 
 .choice-text {
-    padding: 2px;
+    padding: 0.2;
     width: 100%;
 }
 
 .choice-letter {
-    padding: 0 5px;
+    padding: 0 0.5rem;
     font-weight: 800;
 }
 
@@ -102,7 +102,7 @@ a:hover {
 
 form input {
     color: #a9a9a9;
-    border: 2px solid #ffffff;
+    border: 0.2rem solid #ffffff;
     text-decoration: none;
     width: 12.5rem;
     padding: 1rem;
