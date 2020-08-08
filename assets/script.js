@@ -71,12 +71,16 @@ startGameClick.addEventListener("click", function(){
     highScorePageRef.parentElement.classList.add("hide");
 })*/
 
-$('#start-game-click').click(function() {
+$('.start-game-click').click(function() {
   $('#game-page').show();
   $('#start-page').hide();
   $('#submit-page').hide();
   $('#high-score-page').hide();
 });
+
+
+
+
 
 
 
