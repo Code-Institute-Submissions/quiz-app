@@ -15,7 +15,6 @@ let userScore = 0;
 let counter = 0;
 let remainingQuestions = []; // allows new question to be given to player each time
 
-
 fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple")
 .then( result => {
     return result.json();
@@ -38,6 +37,8 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
                 currentQuestion['choice' + (index + 1)] = choice;
             });
 
+    
+
             return currentQuestion;
         });
 
@@ -52,9 +53,11 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
 
 
 
+
 // Set constants for game
 const addPoints = 15;// When you get a correct answer it adds points
 const questionLimit = 3; // Limits no. of questions per game
+let questions = [];
 
 
 // Arrow functions to start game
@@ -127,4 +130,4 @@ increaseScore = number => {
     userScoreDisplay.innerText = userScore;
 }
 
-startQuiz();
+//startQuiz();
