@@ -92,8 +92,8 @@ Problem: When clicking the answer options they wouldn't always respond. If you c
 Solution: It turned out that the click event was added to the actual p tag within the button, rather than the full button. The click event needed to be moved to the whole button.
 This way there would be a response, regardless of whether the user clicked the actual text or not, as long as it was in the button.
 
-Problem: When using the API, the unicode characters are not appearing properly. For example, "world's" is appearing as "world&#039;s" . This happens throughout the questions, in situations 
-where commas or apostrophes are used.
+Problem: When using the API, some characters are not appearing properly. For example, "world's" is appearing as "world&#039;s" . This happens throughout the questions, in situations 
+where commas or apostrophes are used. After some research, it turned out that this was because the HTML entities need to be decoded. 
 
 ### Deployment
 
