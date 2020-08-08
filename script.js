@@ -145,7 +145,7 @@ console.log(highScores);
 // iterate through each high score and add list elements with username and score inside of it
 
 scoresList.innerHTML = highScores
-    .map( score =>{
+    .map( score => {
     return `<li class="high-score">${score.name} - ${score.score}</li>`;
 })
 .join("");
