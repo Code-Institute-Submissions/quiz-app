@@ -53,12 +53,12 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
 
 // Hide and display HTML sections
 
-const startPageRef = document.querySelector('#start-page');
+/*const startPageRef = document.querySelector('#start-page');
 const gamePageRef = document.querySelector('#game-page');
 const submitPageRef = document.querySelector('#submit-page');
 const highScorePageRef = document.querySelector('#high-score-page');
 
-const startGameClick = document.querySelector('#start-game-click');
+const startGameClick = document.querySelector('.start-game-click');
 const tryAgainClick = document.querySelector('#try-again-click');
 const submitScoreClick = document.querySelector('#submit-score-click');
 const homeClick = document.querySelector('#home-click');
@@ -69,7 +69,10 @@ startGameClick.addEventListener("click", function(){
     startPageRef.parentElement.classList.add("hide");
     submitPageRef.parentElement.classList.add("hide");
     highScorePageRef.parentElement.classList.add("hide");
-})
+})*/
+
+
+
 
 
 
