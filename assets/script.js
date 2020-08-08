@@ -138,6 +138,7 @@ increaseScore = number => {
 const scoresList = document.getElementById("scoresList");
 
 //get high scores out of local storage
+debugger;
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 console.log(highScores);
