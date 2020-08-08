@@ -159,7 +159,7 @@ const endScore = document.getElementById('endScore');
 const lastScore = localStorage.getItem('lastScore');
 
 //et reference to high scores, pull what is in local storage and convert to JSON, if nothing there then reference empty array
-const highScores = JSON.parse(localStorage.getItem("highScores")) || [] ;
+
 console.log(highScores);
 
 const maxScores = 5;
