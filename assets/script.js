@@ -78,7 +78,7 @@ $('#submit-score-click').click(function() {
   $('#game-page').hide();
 });
 
-$('#home-click').click(function() {
+$('.home-click').click(function() {
   $('#start-page').show();
   $('#high-score-page').hide();
   $('#submit-page').hide();
