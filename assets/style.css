@@ -114,12 +114,28 @@ form input {
     text-align: center;
 }
 
+
+
 #scoresList {
     list-style: none;
+    padding: 10px;
+    width: 30%;
+    color: white;
 }
 
 .high-score {
     margin: 0.5rem;
+}
+
+.name {
+  display: inline-block;
+  width: 30%;
+  background-color: 
+}
+
+.score {
+  display: inline-block;
+  width: 5%;
 }
 
 .show {
