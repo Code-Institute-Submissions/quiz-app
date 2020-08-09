@@ -116,7 +116,6 @@ const nextQuestion = () => {
 
         submitPage();
 
-
     }
     counter++; // Increment by 1 when game is started
     counterDisplay.innerText = `${counter}/${questionLimit}`; // Increment with each question
