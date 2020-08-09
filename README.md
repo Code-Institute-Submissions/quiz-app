@@ -102,7 +102,12 @@ of investigating with debugger tools, and some help from tutor support, we reali
 which was running that function before the server returns the questions. This meant that when an if statement was checked, the questions did not return the intended value. 
 I removed the function from the end of the code, and placed it within the correct location. This did the trick!
 
-Problem: On the page where you would select the answers to the question, there was a delay (separate from the delay above) when clicking the answers. 
+Problem: On the page where you would select the answers to the question, there was a delay (separate from the delay above) when clicking the answers.
+
+Problem: In order to style the page positioning, I used CSS flexbox. This had the effect of centre aligning the content both vertically and horizontally. However, as I was also using 
+jQuery to show and hide sections, flexbox was using "display:none;" for styling, while jQuery was adding "display: none;" and "display:block;" to different sections. 
+Solution: After experimenting with dev tools, I realized that this was causing the broken styling issue. To solve this I added another div that wrapped the content, so there would be a div
+enclosing each section which had an id showing which section - jQuery would use this. Then for the styling, then was another div with the id "container". 
 
 ### Deployment
 
