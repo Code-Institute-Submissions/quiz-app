@@ -220,10 +220,12 @@ username.addEventListener("keyup", () => {
     console.log(username.value);
 }); 
 
+$("#form").on('submit', function(event){
+    event.preventDefault();
+});
 
 saveScore = e => {
-    console.log("clicked save");
-    e.preventDefault();
+     e.preventDefault();
   
     const score = {
         score: lastScore,
