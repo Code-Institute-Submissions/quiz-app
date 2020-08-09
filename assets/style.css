@@ -60,6 +60,7 @@ a:hover {
     align-items: center;
     justify-content: center; 
     text-align: center;
+    padding: 5%;
 }
 
 .choice-container:hover {
