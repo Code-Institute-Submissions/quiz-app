@@ -85,8 +85,6 @@ $('#home-click').click(function() {
 
 
 
-
-
 // Set constants for game
 const addPoints = 15;// When you get a correct answer it adds points
 const questionLimit = 3; // Limits no. of questions per game
@@ -107,6 +105,7 @@ const nextQuestion = () => {
         //go to the end page
         //return window.location.assign('index.html');
 
+        debugger;
         submitPage = () => {
          $('#submit-page').show();
          $('#high-score-page').hide();
