@@ -63,6 +63,7 @@ $("#start-game-click").click(function() {
 });
 
 $('#high-score-click').click(function() {
+    console.log("High score show");
   $('#high-score-page').show();
   $('#start-page').hide();
   $('#submit-page').hide();
@@ -70,6 +71,7 @@ $('#high-score-click').click(function() {
 });
 
 $('#submit-score-click').click(function() {
+     console.log("submit score show");
   $('#high-score-page').show();
   $('#start-page').hide();
   $('#submit-page').hide();
@@ -105,14 +107,16 @@ const nextQuestion = () => {
         //go to the end page
         //return window.location.assign('index.html');
 
-        debugger;
+    
         submitPage = () => {
+        console.log("submit function");
          $('#submit-page').show();
          $('#high-score-page').hide();
          $('#start-page').hide();
          $('#game-page').hide();
         }
 
+        
         submitPage();
 
     }
