@@ -142,6 +142,10 @@ form input {
   width: 10%;
 }
 
+#icon {
+    width: 2.5%;
+}
+
 .show {
     display: block;
 }

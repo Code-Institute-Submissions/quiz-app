@@ -220,6 +220,7 @@ username.addEventListener("keyup", () => {
     console.log(username.value);
 }); 
 
+
 saveScore = e => {
     console.log("clicked save");
     e.preventDefault();
