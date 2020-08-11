@@ -21,6 +21,23 @@ h2 {
     font-size: 1.3rem;
 }
 
+a:hover {
+    background-color: #00909e;
+}
+
+form input {
+    color: #a9a9a9;
+    border: 0.2rem solid #ffffff;
+    text-decoration: none;
+    width: 12.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: #ffffff;
+    font-size: 1rem;
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+}
+
 /* Position styling */ 
 
 .flex-container {
@@ -34,6 +51,8 @@ h2 {
   align-items: center;
 }
 
+/* Classes */ 
+
 .button {
     color: #ffffff;
     border: 0.2rem solid #ffffff;
@@ -44,12 +63,6 @@ h2 {
     background-color: #27496d;
     font-family: 'Inconsolata', monospace;
     font-size: 1.2rem;
-}
-
-
-
-a:hover {
-    background-color: #00909e;
 }
 
 .container {
@@ -94,37 +107,12 @@ a:hover {
     background-color: red;
 }
 
-
-/* End Page */
-
-
-form input {
-    color: #a9a9a9;
-    border: 0.2rem solid #ffffff;
-    text-decoration: none;
-    width: 12.5rem;
-    padding: 1rem;
-    margin: 0.5rem;
-    background-color: #ffffff;
-    font-size: 1rem;
-    font-family: 'Inconsolata', monospace;
-    text-align: center;
+.show {
+    display: block;
 }
 
-#score-board {
-    background-color: #285582;
-    padding-top: 3rem;
-    color: white;
-    border: 1px solid #ffffff;
-    margin-bottom: 1rem;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-}
-
-#scoresList {
-    list-style: none;
-
+.hide {
+    display: none;
 }
 
 .high-score {
@@ -144,24 +132,39 @@ form input {
   width: 10%;
 }
 
+/* End Page */
+
+
+#score-board {
+    background-color: #285582;
+    padding-top: 3rem;
+    color: white;
+    border: 1px solid #ffffff;
+    margin-bottom: 1rem;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+#scoresList {
+    list-style: none;
+
+}
+
+
+
 #icon {
     width: 8%;
     margin: 5px auto;
 }
 
-.show {
-    display: block;
-}
 
-.hide {
-    display: none;
-}
 
 #game-page, #submit-page, #high-score-page {
     display: none;
 }
 
-
+/* Media Queries */ 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .choice-container {
@@ -185,7 +188,6 @@ form input {
     h2 {
     font-size: 1.1rem;
     }
-
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
