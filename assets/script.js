@@ -252,8 +252,6 @@ saveScore = e => {
     //window.location.assign("index.html");
 
     console.log(highScores);
-
-    
 };
 
 /* End Final page */
