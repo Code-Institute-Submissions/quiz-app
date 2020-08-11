@@ -55,6 +55,7 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
 
 
 $("#start-game-click").click(function() {
+
   console.log("click start");
   $('#game-page').show();
   $('#start-page').hide();
@@ -206,6 +207,9 @@ const username = document.getElementById('username');
 const submitScoreClick = document.getElementById('submit-score-click');
 const endScore = document.getElementById('endScore');
 const lastScore = localStorage.getItem('lastScore');
+endScore.innerText = lastScore;
+
+console.log(lastScore);
 
 //et reference to high scores, pull what is in local storage and convert to JSON, if nothing there then reference empty array
 
@@ -213,18 +217,18 @@ console.log(highScores);
 
 const maxScores = 5;
 
-endScore.innerText = lastScore;
-
 username.addEventListener("keyup", () => {
-    submitScoreClick.disabled = !username.value;
     console.log(username.value);
+    submitScoreClick.disabled = !username.value; 
 }); 
 
 $("#form").on('submit', function(event){
     event.preventDefault();
-});
+}); 
 
 saveScore = e => {
+
+    console.log("clicked save");
      e.preventDefault();
   
     const score = {
@@ -245,7 +249,7 @@ saveScore = e => {
     // update local storage with high scores
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
-    window.location.assign("index.html");
+    //window.location.assign("index.html");
 
     console.log(highScores);
 
