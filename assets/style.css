@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
 
-/*  Default styles */ 
+/*  Element styles */ 
 html {
     font-size: 16px;
     overflow: hidden;
@@ -51,7 +51,7 @@ form input {
   align-items: center;
 }
 
-/* Classes */ 
+/* Classe styles */ 
 
 .button {
     color: #ffffff;
@@ -132,7 +132,7 @@ form input {
   width: 10%;
 }
 
-/* End Page */
+/* ID styles*/
 
 
 #score-board {
@@ -151,13 +151,10 @@ form input {
 
 }
 
-
-
 #icon {
     width: 8%;
     margin: 5px auto;
 }
-
 
 
 #game-page, #submit-page, #high-score-page {
