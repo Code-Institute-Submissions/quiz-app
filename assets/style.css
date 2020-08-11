@@ -161,28 +161,37 @@ form input {
     display: none;
 }
 
-// Small devices (landscape phones, 576px and up)
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .choice-container {
         min-width: 80%;
+        padding: 0;
+    }
+
+    
+    .container {
+        padding: 3%;
     }
 
     body {
-        background-color: pink;
+    font-size: 1rem;
     }
-}
+
+    h1 {
+    font-size: 1.2rem;
+    }
+
+    h2 {
+    font-size: 1.1rem;
+    }
+
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
+@media only screen and (min-width: 600px) {
+     .choice-container {
+        min-width: 80%;
+    }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
-      
+}
