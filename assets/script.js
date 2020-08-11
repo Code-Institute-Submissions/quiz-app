@@ -117,6 +117,12 @@ const nextQuestion = () => {
          $('#game-page').hide();
         }
 
+        updateScore = () => {
+        document.getElementById('lastScore').innerHTML = userScore;
+        };
+
+        updateScore();
+
         
         submitPage();
 
@@ -169,53 +175,27 @@ options.forEach(option => { // Add click event listener to each choice
             selectedOption.parentElement.classList.remove(applyClass); // Remove class
             nextQuestion();
         }, 1000);
+
+        console.log(userScore);
   });
 }); 
 
 increaseScore = number => {
     userScore += number;
     userScoreDisplay.innerText = userScore;
-}
+};
+
 
 //startQuiz();
-
-/* High Score page */ 
-
-// reference scores list
-const scoresList = document.getElementById("scoresList");
-
-//get high scores out of local storage
-
-const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-
-console.log(highScores);
-
-// iterate through each high score and add list elements with username and score inside of it
-
-scoresList.innerHTML = highScores
-    .map( score => {
-
-    return `<li class="high-score"><div class="name">${score.name}</div><div class="score">${score.score}</div></li>`;
-   
-})
-.join("");
-
-/* End High Score Page */
 
 /* Final page */
 const username = document.getElementById('username');
 const submitScoreClick = document.getElementById('submit-score-click');
-const endScore = document.getElementById('endScore');
 const lastScore = localStorage.getItem('lastScore');
-endScore.innerText = lastScore;
 
-console.log(lastScore);
 
-//et reference to high scores, pull what is in local storage and convert to JSON, if nothing there then reference empty array
 
-console.log(highScores);
 
-const maxScores = 5;
 
 username.addEventListener("keyup", () => {
     console.log(username.value);
@@ -235,23 +215,8 @@ saveScore = e => {
         score: lastScore,
         name: username.value
     };
-
-    highScores.push(score); //push through the score to HighScores array
-
-    // sort scores in highest to lowest, by taking the b score and subtracting a score - if b score is higher than a, then put b before a
-    highScores.sort( (a,b) => { 
-        return b.score - a.score;
-    })
-
-    // cut after 5 scores 
-    highScores.splice(5);
-
-    // update local storage with high scores
-
-    localStorage.setItem("highScores", JSON.stringify(highScores));
-    //window.location.assign("index.html");
-
-    console.log(highScores);
 };
 
 /* End Final page */
+
+
