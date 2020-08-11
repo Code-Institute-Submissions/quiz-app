@@ -34,7 +34,7 @@ h2 {
   align-items: center;
 }
 
-.button, a {
+.button {
     color: #ffffff;
     border: 0.2rem solid #ffffff;
     text-decoration: none;
@@ -62,9 +62,6 @@ a:hover {
     height: 100vh;
 }
 
-.choice-container:hover {
-    background-color: grey;
-}
 
 .choice-container {
     color: #ffffff;
@@ -166,7 +163,7 @@ form input {
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
- }
+}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
