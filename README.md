@@ -41,7 +41,7 @@ should be fully responsive and accessible from all devices and screen sizes.
 ### User Goals
 * **Educational website** that allows users to answer questions on general knowledge.
 * **Well placed calls to action** which allow the user to easily navigate to a game or view the high scores.
-* Ability to **view high scores** for some added healthy competition.
+* Ability to **view high scores** for the user, which allowed you the option to beat your previous high score each time.
 * **Seamless UX experience for the user** via a planned design with contrasting colours to allow high readability.
 * Use the website across all screen sizes, from desktop to mobile. **Fully responsive design**.
 
