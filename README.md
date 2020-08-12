@@ -86,6 +86,14 @@ navy inspired palette</a> was chosen for colours throughout the website.
 
 ### Testing Stories
 
+As this project was my first introduction to JavaScript, I knew I would have to continuously test the game while developing it. Throughout the project, this materialized in the form of 
+using many "console.log();" methods to ensure that the output of the code was as expected. This helped me keep on track and identify the problem further. I also became familiar during 
+this project with the debugger; tool in chrome, which was really helpful. This assisted me in identifying where the problems were coming from, through showing how the code executed 
+different functions and code. 
+
+As I tested the game continuously throughout the building process, there were a couple of significant changes that I made to the design of the game. These were made to improve user 
+experience, as during the testing phases it emerged that there were better ways to do these; 
+
 * At one point the project was split between numerous HTML and JavaScript files. This meant there wasn't code repeated, such as the header in the HTML and linking stylesheets and js 
 files. It also meant a faster game for the user, as the page didn't need to reload each time they clicked a button. Instead, it gave the illusion that the page was changing while
 remaining on the same URL and using jQuery to show and hide the relevant sections. 
