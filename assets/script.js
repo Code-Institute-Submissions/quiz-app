@@ -80,6 +80,7 @@ $('#submit-score-click').click(function() {
 });
 
 $('.home-click').click(function() {
+  location.reload();
   $('#start-page').show();
   $('#high-score-page').hide();
   $('#submit-page').hide();
