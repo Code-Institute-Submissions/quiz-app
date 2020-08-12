@@ -118,7 +118,8 @@ const nextQuestion = () => {
 
         updateScore();
 
-        
+        updateHighScore();
+
         submitPage();
 
     }
@@ -196,15 +197,13 @@ localStorage.setItem("highScoreStorage",highScore);
 
 
 updateHighScore = () => {
-    
-
     if (lastScore > highScore || highScore === undefined) {
         console.log("higher than high score");
+        highScore = localStorage.getItem('lastScore');
     }
-    else console.log("Didn't work");
+    else console.log("Not higher than high score");
 };
 
-updateHighScore();
 
 /* end score */
 
