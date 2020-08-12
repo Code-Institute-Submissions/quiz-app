@@ -112,8 +112,6 @@ of investigating with debugger tools, and some help from tutor support, we reali
 which was running that function before the server returns the questions. This meant that when an if statement was checked, the questions did not return the intended value. 
 I removed the function from the end of the code, and placed it within the correct location. This did the trick!
 
-Problem: On the page where you would select the answers to the question, there was a delay (separate from the delay above) when clicking the answers.
-
 Problem: When the user finished a game and clicked home and then start, the question counter and the user score would not reset. This meant that the user started the second game with a 
 question count of 4/3 and it would end immediately after that first question. 
 Solution: After some investigation, it seemed that the problem was stemming from the fact the page was just showing and hiding elements - the score or counter was thus never refreshed. 
