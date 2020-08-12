@@ -190,12 +190,32 @@ increaseScore = number => {
 //startQuiz();
 
 /* Final page */
+
 const username = document.getElementById('username');
 const submitScoreClick = document.getElementById('submit-score-click');
 const lastScore = localStorage.getItem('lastScore');
 
 
+/* Check if score should push to high score */
 
+document.getElementById("highScore");
+let highScore = 0;
+localStorage.setItem("highScoreStorage",highScore);
+//localStorage.getItem(highScoreStorage);
+
+console.log(highScore);
+updateHighScore = () => {
+    
+
+    if (lastScore > highScore || highScore === undefined) {
+        console.log("higher than high score");
+    }
+    else console.log("Didn't work");
+};
+
+updateHighScore();
+
+/* end score */
 
 
 username.addEventListener("keyup", () => {
@@ -220,10 +240,6 @@ saveScore = e => {
 
 /* End Final page */
 
-/* Check if score should push to high score */
 
-const highScore = document.getElementById("highScore");
-localStorage.setItem("highScoreStorage",highScore);
-localStorage.getItem(highScoreStorage);
 
 
