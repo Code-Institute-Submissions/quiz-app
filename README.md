@@ -90,6 +90,10 @@ navy inspired palette</a> was chosen for colours throughout the website.
 files. It also meant a faster game for the user, as the page didn't need to reload each time they clicked a button. Instead, it gave the illusion that the page was changing while
 remaining on the same URL and using jQuery to show and hide the relevant sections. 
 
+* Originally there was a high score board, which would allow a username input and then would show all the high scores at the end. However, as the project was utilizing local storage
+ it was only showing high scores and usernames from one device/browser. This meant that most of the time it would only show that one users high scores and username, which didn't make
+  much sense in the context of a leaderboard. Based on this, the design was changed so that it would show the score from the game just played by the user, and then also their highest
+   score yet. The user score would replace the previous high score in local storage, if it was higher. 
 
 
 ### Bugs
