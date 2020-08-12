@@ -141,6 +141,10 @@ When deploying the quiz game using GitHub Pages the following steps were made:
 - The quiz game was then running on Github Pages. 
 
 ### Closing Notes
+Overall I found this project much more challenging than the first milestone. It was my first experience with object oriented programming, which I found quite hard to wrap my head around. 
+For this reason, the project ended up taking a bit longer than I had originally planned. Often it seemed that when I fixed one bug, I would cause two more! However, towards the end the
+penny started to drop a bit more and I found that the concepts became much clearer. I am quite a practical learner, so despite the frustration at times, I found this project to be really 
+helpful in terms of introducing me to object oriented programming. 
 
 ### Credits 
 The Youtube series from James Quick <a href="https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx">Build a Quiz App</a> provided some inspiration in the planning phase of the project. 
