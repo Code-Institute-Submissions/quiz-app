@@ -80,6 +80,8 @@ navy inspired palette</a> was chosen for colours throughout the website.
 
 #### Libraries and Tools
 * <a href="https://getbootstrap.com/">Bootstrap</a>
+* <a href="https://jquery.com/">JQuery</a>
+* <a href="https://opentdb.com/api_config.php">Open Trivia Database</a>
 * <a href="https://fonts.google.com/">Google Fonts</a>
 * <a href="https://git-scm.com/">Git</a>
 * <a href="https://colorhunt.co/">Color Hunt</a>
