@@ -216,8 +216,14 @@ saveScore = e => {
         score: lastScore,
         name: username.value
     };
-};
+}; 
 
 /* End Final page */
+
+/* Check if score should push to high score */
+
+const highScore = document.getElementById("highScore");
+localStorage.setItem("highScoreStorage",highScore);
+localStorage.getItem(highScoreStorage);
 
 
