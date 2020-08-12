@@ -84,7 +84,7 @@ navy inspired palette</a> was chosen for colours throughout the website.
 * <a href="https://git-scm.com/">Git</a>
 * <a href="https://colorhunt.co/">Color Hunt</a>
 
-### Testing
+### Testing Stories
 
 * At one point the project was split between numerous HTML and JavaScript files. This meant there wasn't code repeated, such as the header in the HTML and linking stylesheets and js 
 files. It also meant a faster game for the user, as the page didn't need to reload each time they clicked a button. Instead, it gave the illusion that the page was changing while
@@ -129,6 +129,7 @@ enclosing each section which had an id showing which section - jQuery would use 
 ### Closing Notes
 
 ### Credits 
+The Youtube series from James Quick <a href="https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx">Build a Quiz App</a> provided some inspiration in the planning phase of the project. 
 
 ### Copyright and Disclaimer
 This website was originally built for education purposes only.
