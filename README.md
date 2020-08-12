@@ -126,6 +126,20 @@ enclosing each section which had an id showing which section - jQuery would use 
 
 ### Deployment
 
+This quiz game was developed on GitPod, using git and GitHub to host the repository.
+
+When deploying the quiz game using GitHub Pages the following steps were made:
+
+- Opened up GitHub in the browser.
+- Signed in using username and password.
+- Selected my repositories.
+- Navigated to laura-ash "/quiz-app".
+- In the top navigation clicked 'settings'.
+- Scrolled down to the GitHub Pages area.
+- Selected 'master' from the 'Source' dropdown menu.
+- Clicked to confirm my selection.
+- The quiz game was then running on Github Pages. 
+
 ### Closing Notes
 
 ### Credits 
