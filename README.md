@@ -86,6 +86,12 @@ navy inspired palette</a> was chosen for colours throughout the website.
 
 ### Testing
 
+* At one point the project was split between numerous HTML and JavaScript files. This meant there wasn't code repeated, such as the header in the HTML and linking stylesheets and js 
+files. It also meant a faster game for the user, as the page didn't need to reload each time they clicked a button. Instead, it gave the illusion that the page was changing while
+remaining on the same URL and using jQuery to show and hide the relevant sections. 
+
+
+
 ### Bugs
 
 Problem: When clicking the answer options they wouldn't always respond. If you clicked them, they would sometimes just highlight in grey but no action would be taken.
