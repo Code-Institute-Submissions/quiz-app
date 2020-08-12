@@ -1,5 +1,4 @@
 // Select qs and options
-
 const question = document.querySelector('#question');
 const options = Array.from(document.querySelectorAll('.choice-text'));
 
@@ -9,6 +8,7 @@ const userScoreDisplay = document.getElementById('userScore');
 
 
 // Create variables
+
 let currentQuestion = {};
 let readyForAnswers = false;
 let userScore = 0;
@@ -45,6 +45,8 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
 
 
         startQuiz();
+        
+        
     })
     .catch((err) => {
         console.error(err);
@@ -188,16 +190,33 @@ const submitScoreClick = document.getElementById('submit-score-click');
 const lastScore = localStorage.getItem('lastScore');
 
 
-/* Check if score should push to high score */
+/* Set high score */
+//document.getElementById("highScore");
+//localStorage.setItem("highScoreStorage",highScore);
 
-document.getElementById("highScore");
-let highScore = 0;
-localStorage.setItem("highScoreStorage",highScore);
-//localStorage.getItem(highScoreStorage);
+highScoreStorage = localStorage.getItem("highScoreStorage");
+
+const readLocalStorage = () => {
+    savedHighScore = localStorage.getItem("highScoreStorage");
+    console.log(savedHighScore);
+    if (savedHighScore != null) {
+        console.log("something in storage");
+        highScore = savedHighScore;
+
+    }
+    else {
+    highScore = 0;
+}}; 
+
+
+
 
 
 updateHighScore = () => {
+    readLocalStorage(); 
+
     if (userScore > highScore) {
+        console.log(highScore);
         console.log("higher than high score");
         localStorage.setItem("highScoreStorage", userScore);
     }
@@ -206,14 +225,10 @@ updateHighScore = () => {
 
 
 
-
-
-   
-
 /* end score */
 
 
-username.addEventListener("keyup", () => {
+/* username.addEventListener("keyup", () => {
     console.log(username.value);
     submitScoreClick.disabled = !username.value; 
 }); 
@@ -221,6 +236,7 @@ username.addEventListener("keyup", () => {
 $("#form").on('submit', function(event){
     event.preventDefault();
 }); 
+*/
 
 saveScore = e => {
 
