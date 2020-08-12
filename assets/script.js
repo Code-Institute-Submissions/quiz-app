@@ -197,13 +197,18 @@ localStorage.setItem("highScoreStorage",highScore);
 
 
 updateHighScore = () => {
-    if (lastScore > highScore || highScore === undefined) {
+    if (userScore > highScore) {
         console.log("higher than high score");
-        highScore = localStorage.getItem('lastScore');
+        localStorage.setItem("highScoreStorage", userScore);
     }
     else console.log("Not higher than high score");
 };
 
+
+
+
+
+   
 
 /* end score */
 
