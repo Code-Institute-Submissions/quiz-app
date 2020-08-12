@@ -42,7 +42,6 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
             return currentQuestion;
         });
 
-        console.log(questions);
 
 
         startQuiz();
@@ -55,8 +54,6 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
 
 
 $("#start-game-click").click(function() {
-
-  console.log("click start");
   $('#game-page').show();
   $('#start-page').hide();
   $('#submit-page').hide();
@@ -64,7 +61,6 @@ $("#start-game-click").click(function() {
 });
 
 $('#high-score-click').click(function() {
-    console.log("High score show");
   $('#high-score-page').show();
   $('#start-page').hide();
   $('#submit-page').hide();
@@ -72,7 +68,6 @@ $('#high-score-click').click(function() {
 });
 
 $('#submit-score-click').click(function() {
-     console.log("submit score show");
   $('#high-score-page').show();
   $('#start-page').hide();
   $('#submit-page').hide();
@@ -111,7 +106,6 @@ const nextQuestion = () => {
 
     
         submitPage = () => {
-        console.log("submit function");
          $('#submit-page').show();
          $('#high-score-page').hide();
          $('#start-page').hide();
@@ -163,9 +157,7 @@ options.forEach(option => { // Add click event listener to each choice
                 applyClass = "right";
             }
 
-        console.log(applyClass);
-
-        if(applyClass === "right") {
+                if(applyClass === "right") {
             increaseScore(addPoints);
         }
 
@@ -177,7 +169,6 @@ options.forEach(option => { // Add click event listener to each choice
             nextQuestion();
         }, 1000);
 
-        console.log(userScore);
   });
 }); 
 
@@ -203,7 +194,7 @@ let highScore = 0;
 localStorage.setItem("highScoreStorage",highScore);
 //localStorage.getItem(highScoreStorage);
 
-console.log(highScore);
+
 updateHighScore = () => {
     
 
