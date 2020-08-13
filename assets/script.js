@@ -118,6 +118,10 @@ const nextQuestion = () => {
         document.getElementById('lastScore').innerHTML = userScore;
         };
 
+        updateHighScore = () => {
+        document.getElementById('highScoreID').innerHTML = highScoreStorage;
+        };
+
         updateScore();
 
         updateHighScore();
@@ -209,9 +213,6 @@ const readLocalStorage = () => {
 }}; 
 
 
-
-
-
 updateHighScore = () => {
     readLocalStorage(); 
 
@@ -238,7 +239,7 @@ $("#form").on('submit', function(event){
 }); 
 */
 
-saveScore = e => {
+/*saveScore = e => {
 
     console.log("clicked save");
      e.preventDefault();
@@ -247,7 +248,7 @@ saveScore = e => {
         score: lastScore,
         name: username.value
     };
-}; 
+}; */
 
 /* End Final page */
 
