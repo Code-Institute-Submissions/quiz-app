@@ -42,6 +42,7 @@ form input {
 
 .flex-container {
     display: flex; 
+    justify-content: center;
 }
 
 .center-columns {
@@ -51,7 +52,7 @@ form input {
   align-items: center;
 }
 
-/* Classe styles */ 
+/* Class styles */ 
 
 .button {
     color: #ffffff;
@@ -132,6 +133,11 @@ form input {
   width: 10%;
 }
 
+.score-card {
+    margin: 5%;
+    max-width: 10%;
+}
+
 /* ID styles*/
 
 
@@ -151,8 +157,8 @@ form input {
 
 }
 
-#icon {
-    width: 8%;
+.icon {
+    width: 40%;
     margin: 5px auto;
 }
 
