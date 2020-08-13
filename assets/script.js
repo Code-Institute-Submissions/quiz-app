@@ -1,19 +1,31 @@
-// Select qs and options
+
+/* Create constants */
+
 const question = document.querySelector('#question');
 const options = Array.from(document.querySelectorAll('.choice-text'));
 
-// Create game info display
 const counterDisplay = document.getElementById('counter');
 const userScoreDisplay = document.getElementById('userScore');
 
 
-// Create variables
+const addPoints = 15;
+const questionLimit = 3;
+
+const username = document.getElementById('username');
+const submitScoreClick = document.getElementById('submit-score-click');
+const lastScore = localStorage.getItem('lastScore');
+
+
+/* Create variables */
 
 let currentQuestion = {};
 let readyForAnswers = false;
 let userScore = 0;
 let counter = 0;
-let remainingQuestions = []; // allows new question to be given to player each time
+let remainingQuestions = []; 
+let questions = [];
+
+/* Fetch questions from API */
 
 fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple")
 .then( result => {
@@ -52,8 +64,8 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
         console.error(err);
     });
 
-// Hide and display HTML sections
 
+/* Hide and display HTML sections */
 
 $("#start-game-click").click(function() {
   $('#game-page').show();
@@ -85,14 +97,8 @@ $('.home-click').click(function() {
 });
 
 
+/* Start game */ 
 
-// Set constants for game
-const addPoints = 15;// When you get a correct answer it adds points
-const questionLimit = 3; // Limits no. of questions per game
-let questions = [];
-
-
-// Arrow functions to start game
 const startQuiz = () => {
     counter = 0;
     userScore = 0;
@@ -100,13 +106,12 @@ const startQuiz = () => {
     nextQuestion();
 };
 
+/* Pull in remaining questions */
+
 const nextQuestion = () => {
     if (remainingQuestions.length === 0 || counter >= questionLimit) {
         localStorage.setItem("lastScore", userScore);
-        //go to the end page
-        //return window.location.assign('index.html');
-
-    
+          
         submitPage = () => {
          $('#submit-page').show();
          $('#high-score-page').hide();
@@ -129,36 +134,29 @@ const nextQuestion = () => {
         submitPage();
 
     }
-    counter++; // Increment by 1 when game is started
-    counterDisplay.innerText = `${counter}/${questionLimit}`; // Increment with each question
+    counter++; 
+    counterDisplay.innerText = `${counter}/${questionLimit}`; 
 
 
-    const questionNumber = Math.floor(Math.random() * remainingQuestions.length); // Find a random number among the no. of available questions
+    const questionNumber = Math.floor(Math.random() * remainingQuestions.length); 
     currentQuestion = remainingQuestions[questionNumber]; 
     question.innerText = currentQuestion.question;
 
-    options.forEach((option) => { // iterate through each choice
-        const number = option.dataset['number']; // reference dataset number ??
-        option.innerText = currentQuestion['choice' + number]; // ??
+    options.forEach((option) => { 
+        const number = option.dataset['number']; 
+        option.innerText = currentQuestion['choice' + number]; 
     });
 
-    remainingQuestions.splice(questionNumber, 1); // Remove used question from array
-    //readyForAnswers = true;
+    remainingQuestions.splice(questionNumber, 1); 
 };
 
-// Add functionality to for next question 
+/* Check if answers are correct */ 
 
-options.forEach(option => { // Add click event listener to each choice
-    option.addEventListener('click', (e) => { // 
-        //if (!readyForAnswers) return; // Ignore clicks if too early
-
-        //readyForAnswers = false;
+options.forEach(option => { 
+    option.addEventListener('click', (e) => { 
         const selectedOption = e.target;
-        
         const selectedAnswer = selectedOption.dataset['number'];
 
-
-       //check if the answers are correct
         let applyClass = "wrong";
             if (selectedAnswer == currentQuestion.answer) {
                 applyClass = "right";
@@ -168,11 +166,10 @@ options.forEach(option => { // Add click event listener to each choice
             increaseScore(addPoints);
         }
 
-         selectedOption.parentElement.classList.add(applyClass); // Select parent container and apply class
+         selectedOption.parentElement.classList.add(applyClass); 
 
-        
         setTimeout(() => {
-            selectedOption.parentElement.classList.remove(applyClass); // Remove class
+            selectedOption.parentElement.classList.remove(applyClass);
             nextQuestion();
         }, 1000);
 
@@ -184,19 +181,7 @@ increaseScore = number => {
     userScoreDisplay.innerText = userScore;
 };
 
-
-//startQuiz();
-
-/* Final page */
-
-const username = document.getElementById('username');
-const submitScoreClick = document.getElementById('submit-score-click');
-const lastScore = localStorage.getItem('lastScore');
-
-
-/* Set high score */
-//document.getElementById("highScore");
-//localStorage.setItem("highScoreStorage",highScore);
+/* Update score and store in local storage */ 
 
 highScoreStorage = localStorage.getItem("highScoreStorage");
 
@@ -213,6 +198,8 @@ const readLocalStorage = () => {
 }}; 
 
 
+/* Update high score if game score is higher */ 
+
 updateHighScore = () => {
     readLocalStorage(); 
 
@@ -224,33 +211,6 @@ updateHighScore = () => {
     else console.log("Not higher than high score");
 };
 
-
-
-/* end score */
-
-
-/* username.addEventListener("keyup", () => {
-    console.log(username.value);
-    submitScoreClick.disabled = !username.value; 
-}); 
-
-$("#form").on('submit', function(event){
-    event.preventDefault();
-}); 
-*/
-
-/*saveScore = e => {
-
-    console.log("clicked save");
-     e.preventDefault();
-  
-    const score = {
-        score: lastScore,
-        name: username.value
-    };
-}; */
-
-/* End Final page */
 
 
 
