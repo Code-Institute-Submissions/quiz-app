@@ -70,21 +70,21 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
 $("#start-game-click").click(function() {
   $('#game-page').show();
   $('#start-page').hide();
-  $('#submit-page').hide();
+  $('#score-page').hide();
   $('#high-score-page').hide();
 });
 
 $('#high-score-click').click(function() {
   $('#high-score-page').show();
   $('#start-page').hide();
-  $('#submit-page').hide();
+  $('#score-page').hide();
   $('#game-page').hide();
 });
 
 $('#submit-score-click').click(function() {
   $('#high-score-page').show();
   $('#start-page').hide();
-  $('#submit-page').hide();
+  $('#score-page').hide();
   $('#game-page').hide();
 });
 
@@ -92,7 +92,7 @@ $('.home-click').click(function() {
   location.reload();
   $('#start-page').show();
   $('#high-score-page').hide();
-  $('#submit-page').hide();
+  $('#score-page').hide();
   $('#game-page').hide();
 });
 
@@ -113,7 +113,7 @@ const nextQuestion = () => {
         localStorage.setItem("lastScore", userScore);
           
         submitPage = () => {
-         $('#submit-page').show();
+         $('#score-page').show();
          $('#high-score-page').hide();
          $('#start-page').hide();
          $('#game-page').hide();
