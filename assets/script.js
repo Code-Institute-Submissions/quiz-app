@@ -8,7 +8,7 @@ const addPoints = 15;
 const questionLimit = 3;
 const username = document.getElementById('username');
 const submitScoreClick = document.getElementById('submit-score-click');
-const highScoreRef = document.getElementById('highScoreID');
+
 const lastScore = localStorage.getItem('lastScore');
 const highScoreStorage = localStorage.getItem('highScoreStorage');
 
@@ -171,23 +171,24 @@ const increaseScore = (number) => {
 
 const readLocalStorage = () => {
 
-  savedHighScore = localStorage.getItem('highScoreStorage');
+  const savedHighScore = localStorage.getItem('highScoreStorage');
 
-  if (!savedHighScore) {
+  if (savedHighScore) {
     console.log('something in storage');
     highScore = savedHighScore;
+    console.log("highScore");
   } else {
+    console.log("nothing stored, set to 0");
     highScore = 0;
+    console.log(highScore);
   }
   return;
 };
 
+
 const updateHighScore = () => {
-
-  readLocalStorage();
-  highScoreRef.innerHTML = highScoreStorage;
-
-  if (userScore > highScore) {
+  
+    if (userScore > highScore) {
     console.log(highScore);
     console.log('higher than high score');
     localStorage.setItem('highScoreStorage', userScore);
@@ -198,9 +199,15 @@ const updateHighScore = () => {
     return;
   }
 
+  const highScoreRef = document.getElementById('highScoreID');
+
+  highScoreRef.innerHTML = highScoreStorage;
   
 };
 
-updateHighScore();
+
+
+readLocalStorage();
+
 
 
