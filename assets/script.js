@@ -102,45 +102,37 @@ const startQuiz = () => {
 /* Pull in remaining questions */
 
 const nextQuestion = () => {
-    if (remainingQuestions.length === 0 || counter >= questionLimit) {
-        localStorage.setItem("lastScore", userScore);
-          
-        submitPage = () => {
-         $('#score-page').show();
-         $('#high-score-page').hide();
-         $('#start-page').hide();
-         $('#game-page').hide();
-        }
 
-        updateScore = () => {
-        document.getElementById('lastScore').innerHTML = userScore;
-        };
+  if (remainingQuestions.length === 0 || counter >= questionLimit) {
+    localStorage.setItem('lastScore', userScore);
+    updateScore();
+    updateHighScore();
+    submitPage();
+  }
 
-        updateHighScore = () => {
-        document.getElementById('highScoreID').innerHTML = highScoreStorage;
-        };
+  counter++;
+  counterDisplay.innerText = `${counter}/${questionLimit}`;
+  const questionNumber = Math.floor(Math.random() * remainingQuestions.length);
+  currentQuestion = remainingQuestions[questionNumber];
+  question.innerText = currentQuestion.question;
 
-        updateScore();
+  options.forEach((option) => {
+    const number = option.dataset['number'];
+    option.innerText = currentQuestion['choice' + number];
+  });
 
-        updateHighScore();
+  remainingQuestions.splice(questionNumber, 1);
+};
 
-        submitPage();
+const updateScore = () => {
+  document.getElementById('lastScore').innerHTML = userScore;
+};
 
-    }
-    counter++; 
-    counterDisplay.innerText = `${counter}/${questionLimit}`; 
-
-
-    const questionNumber = Math.floor(Math.random() * remainingQuestions.length); 
-    currentQuestion = remainingQuestions[questionNumber]; 
-    question.innerText = currentQuestion.question;
-
-    options.forEach((option) => { 
-        const number = option.dataset['number']; 
-        option.innerText = currentQuestion['choice' + number]; 
-    });
-
-    remainingQuestions.splice(questionNumber, 1); 
+const submitPage = () => {
+  $('#score-page').show();
+  $('#high-score-page').hide();
+  $('#start-page').hide();
+  $('#game-page').hide();
 };
 
 /* Check if answers are correct */ 
