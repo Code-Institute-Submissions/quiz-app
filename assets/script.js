@@ -137,33 +137,34 @@ const submitPage = () => {
 
 /* Check if answers are correct */ 
 
-options.forEach(option => { 
-    option.addEventListener('click', (e) => { 
-        const selectedOption = e.target;
-        const selectedAnswer = selectedOption.dataset['number'];
+options.forEach((option) => {
 
-        let applyClass = "wrong";
-            if (selectedAnswer == currentQuestion.answer) {
-                applyClass = "right";
-            }
+  option.addEventListener('click', (e) => {
+    const selectedOption = e.target;
+    const selectedAnswer = selectedOption.dataset['number'];
 
-                if(applyClass === "right") {
-            increaseScore(addPoints);
-        }
+    let applyClass = 'wrong';
 
-         selectedOption.parentElement.classList.add(applyClass); 
+    if (selectedAnswer == currentQuestion.answer) {
+      applyClass = 'right';
+    }
 
-        setTimeout(() => {
-            selectedOption.parentElement.classList.remove(applyClass);
-            nextQuestion();
-        }, 1000);
+    if (applyClass === 'right') {
+      increaseScore(addPoints);
+    }
 
+    selectedOption.parentElement.classList.add(applyClass);
+
+    setTimeout(() => {
+      selectedOption.parentElement.classList.remove(applyClass);
+      nextQuestion();
+    }, 1000);
   });
-}); 
+});
 
-increaseScore = number => {
-    userScore += number;
-    userScoreDisplay.innerText = userScore;
+const increaseScore = (number) => {
+  userScore += number;
+  userScoreDisplay.innerText = userScore;
 };
 
 /* Update score and store in local storage */ 
