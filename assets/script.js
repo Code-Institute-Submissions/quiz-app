@@ -1,19 +1,16 @@
 
 /* Create constants */
-
 const question = document.querySelector('#question');
 const options = Array.from(document.querySelectorAll('.choice-text'));
-
 const counterDisplay = document.getElementById('counter');
 const userScoreDisplay = document.getElementById('userScore');
-
-
 const addPoints = 15;
 const questionLimit = 3;
-
 const username = document.getElementById('username');
 const submitScoreClick = document.getElementById('submit-score-click');
+const highScoreRef = document.getElementById('highScoreID');
 const lastScore = localStorage.getItem('lastScore');
+const highScoreStorage = localStorage.getItem('highScoreStorage');
 
 
 /* Create variables */
