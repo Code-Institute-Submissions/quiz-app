@@ -19,47 +19,43 @@ let currentQuestion = {};
 let readyForAnswers = false;
 let userScore = 0;
 let counter = 0;
-let remainingQuestions = []; 
+let remainingQuestions = [];
 let questions = [];
 
 /* Fetch questions from API */
 
-fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple")
-.then( result => {
+fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple')
+  .then((result) => {
+
     return result.json();
-})
-.then((apiQuestions) => {
-        questions = apiQuestions.results.map((apiQuestion) => {
-            const currentQuestion = {
-                question: apiQuestion.question,
-            };
-
-            const answerOptions = [...apiQuestion.incorrect_answers];
-            currentQuestion.answer = Math.floor(Math.random() * 4) + 1;
-            answerOptions.splice(
-                currentQuestion.answer - 1,
-                0,
-                apiQuestion.correct_answer
-            );
-
-            answerOptions.forEach((choice, index) => {
-                currentQuestion['choice' + (index + 1)] = choice;
-            });
-
-    
-
-            return currentQuestion;
-        });
 
 
+  })
 
-        startQuiz();
-        
-        
-    })
-    .catch((err) => {
-        console.error(err);
+  .then((apiQuestions) => {
+    questions = apiQuestions.results.map((apiQuestion) => {
+      const currentQuestion = {
+        question: apiQuestion.question,
+      };
+
+      const answerOptions = [...apiQuestion.incorrect_answers];
+      currentQuestion.answer = Math.floor(Math.random() * 4) + 1;
+      answerOptions.splice(currentQuestion.answer - 1, 0, apiQuestion.correct_answer);
+
+      answerOptions.forEach((choice, index) => {
+        currentQuestion['choice' + (index + 1)] = choice;
+      });
+      return currentQuestion;
     });
+
+    startQuiz();
+
+  })
+
+  .catch((err) => {
+    console.error(err);
+
+  });
 
 
 /* Hide and display HTML sections */
