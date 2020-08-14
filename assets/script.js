@@ -188,7 +188,7 @@ const updateHighScore = () => {
 
   readLocalStorage();
   highScoreRef.innerHTML = highScoreStorage;
-
+  
   if (userScore > highScore) {
     console.log(highScore);
     console.log('higher than high score');
@@ -197,7 +197,6 @@ const updateHighScore = () => {
     console.log('Not higher than high score');
   }
 };
-
 
 
 
