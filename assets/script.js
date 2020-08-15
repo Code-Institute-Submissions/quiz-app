@@ -170,8 +170,7 @@ const increaseScore = (number) => {
 
 const readLocalStorage = () => {
 
-    const savedHighScore = localStorage.getItem('highScoreStorage');
-
+  const savedHighScore = localStorage.getItem('highScoreStorage');
     if (savedHighScore) {
         console.log('something in storage');
         highScore = savedHighScore;
@@ -183,30 +182,24 @@ const readLocalStorage = () => {
     }
     return;
 };
-
-
 const updateHighScore = () => {
-
     if (userScore >= highScore) {
         console.log(highScore);
         console.log('higher than high score');
         localStorage.setItem('highScoreStorage', userScore);
         return;
-
     } else {
         console.log('Not higher than high score');
         return;
     }
-
     highScoreRef = document.getElementById('highScoreID');
     highScoreRef.innerHTML = highScoreStorage;
-
 };
-
 const updateScoreStorage = () => {
     document.getElementById('highScoreID').innerHTML = highScore;
 };
 
-
-
 readLocalStorage();
+
+
+
