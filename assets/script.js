@@ -3,8 +3,8 @@ const question = document.querySelector('#question');
 const options = Array.from(document.querySelectorAll('.choice-text'));
 const counterDisplay = document.getElementById('counter');
 const userScoreDisplay = document.getElementById('userScore');
-const addPoints = 15;
-const questionLimit = 3;
+const addPoints = 10;
+const questionLimit = 5;
 const username = document.getElementById('username');
 const submitScoreClick = document.getElementById('submit-score-click');
 const lastScore = localStorage.getItem('lastScore');
@@ -187,7 +187,7 @@ const readLocalStorage = () => {
 
 const updateHighScore = () => {
 
-    if (userScore > highScore) {
+    if (userScore >= highScore) {
         console.log(highScore);
         console.log('higher than high score');
         localStorage.setItem('highScoreStorage', userScore);
