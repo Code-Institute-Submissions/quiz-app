@@ -119,17 +119,18 @@ where special characters such as commas or apostrophes are used.
 Fix: After some research, it turned out that this was because the HTML entities need to be decoded.
 Verdict: When the questions were being pulled in, I replaced the ".innerText" property with ".innerHTML". This decoded the text as it was pulled in from the API. 
 
-Problem: There was an error in the console that was appearing "Uncaught ReferenceError: questions is not defined at startQuiz (script.js:73), at script.js:139". 
-Solution: This was because there was a reference to questions when it had not been defined. This caused some confusion, as it was actually defined within the js file. However, I needed to 
+Bug: There was an error in the console that was appearing "Uncaught ReferenceError: questions is not defined at startQuiz (script.js:73), at script.js:139". 
+Fix: This was because there was a reference to questions when it had not been defined. This caused some confusion, as it was actually defined within the js file. However, I needed to 
 add it to the global scope. Based on this, I added an empty array titled questions, but this seemed to break functionality and the API questions were no longer pulling through. After a lot 
 of investigating with debugger tools, and some help from tutor support, we realised that it wasn't working because I called another function startQuiz at the end of my code, 
 which was running that function before the server returns the questions. This meant that when an if statement was checked, the questions did not return the intended value. 
-I removed the function from the end of the code, and placed it within the correct location. This did the trick!
+Verdict: I removed the function from the end of the code, and placed it within the correct location. This did the trick!
 
-Problem: When the user finished a game and clicked home and then start, the question counter and the user score would not reset. This meant that the user started the second game with a 
+Bug: When the user finished a game and clicked home and then start, the question counter and the user score would not reset. This meant that the user started the second game with a 
 question count of 4/3 and it would end immediately after that first question. 
-Solution: After some investigation, it seemed that the problem was stemming from the fact the page was just showing and hiding elements - the score or counter was thus never refreshed. 
-I added a location.reload(); to a click event for the button "Home". This had the effect of restarting the game each time, with the user score and counter to 0. 
+Fix: After some investigation, it seemed that the problem was stemming from the fact the page was just showing and hiding elements - the score or counter was thus never refreshed. 
+Verdict: I added a location.reload(); to a click event for the button "Home". This had the effect of restarting the game each time, with the user score and counter to 0. 
+
 
 Problem: In order to style the page positioning, I used CSS flexbox. This had the effect of centre aligning the content both vertically and horizontally. However, as I was also using 
 jQuery to show and hide sections, flexbox was using "display:none;" for styling, while jQuery was adding "display: none;" and "display:block;" to different sections. 
