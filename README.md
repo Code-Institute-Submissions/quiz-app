@@ -131,11 +131,11 @@ question count of 4/3 and it would end immediately after that first question.
 Fix: After some investigation, it seemed that the problem was stemming from the fact the page was just showing and hiding elements - the score or counter was thus never refreshed. 
 Verdict: I added a location.reload(); to a click event for the button "Home". This had the effect of restarting the game each time, with the user score and counter to 0. 
 
-
-Problem: In order to style the page positioning, I used CSS flexbox. This had the effect of centre aligning the content both vertically and horizontally. However, as I was also using 
+Bug: In order to style the page positioning, I used CSS flexbox. This had the effect of centre aligning the content both vertically and horizontally. However, as I was also using 
 jQuery to show and hide sections, flexbox was using "display:none;" for styling, while jQuery was adding "display: none;" and "display:block;" to different sections. 
-Solution: After experimenting with dev tools, I realized that this was causing the broken styling issue. To solve this I added another div that wrapped the content, so there would be a div
-enclosing each section which had an id showing which section - jQuery would use this. Then for the styling, then was another div with the id "container". 
+Fix: After experimenting with dev tools, I realized that this was causing the broken styling issue.
+Verdict: To solve this I added another div that wrapped the content, so there would be a div
+enclosing each section which had an id showing which section - jQuery would use this. Then for the styling, then was another div with the id "container".   
 
 ### Deployment
 
