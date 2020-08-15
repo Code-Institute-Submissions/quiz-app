@@ -114,8 +114,10 @@ user clicked the actual text or not, as long as it was in the button.
 Verdict: A width of 100% was added to the button class, so then the click event covered the whole button. 
 
 
-Problem: When using the API, some characters are not appearing properly. For example, "world's" is appearing as "world&#039;s" . This happens throughout the questions, in situations 
-where commas or apostrophes are used. After some research, it turned out that this was because the HTML entities need to be decoded. 
+Bug: When using the API, some characters were not appearing properly. For example, "world's" is appearing as "world&#039;s" . This happenrf throughout the questions, in situations 
+where special characters such as commas or apostrophes are used. 
+Fix: After some research, it turned out that this was because the HTML entities need to be decoded.
+Verdict: When the questions were being pulled in, I replaced the ".innerText" property with ".innerHTML". This decoded the text as it was pulled in from the API. 
 
 Problem: There was an error in the console that was appearing "Uncaught ReferenceError: questions is not defined at startQuiz (script.js:73), at script.js:139". 
 Solution: This was because there was a reference to questions when it had not been defined. This caused some confusion, as it was actually defined within the js file. However, I needed to 
