@@ -126,7 +126,7 @@ const nextQuestion = () => {
 };
 
 const updateScore = () => {
-  document.getElementById('lastScore').innerHTML = userScore;
+  document.getElementById('lastScore').innerText = userScore;
 };
 
 const submitPage = () => {
