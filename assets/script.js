@@ -115,11 +115,11 @@ const nextQuestion = () => {
   counterDisplay.innerText = `${counter}/${questionLimit}`;
   const questionNumber = Math.floor(Math.random() * remainingQuestions.length);
   currentQuestion = remainingQuestions[questionNumber];
-  question.innerText = currentQuestion.question;
+  question.innerHTML = currentQuestion.question;
 
   options.forEach((option) => {
     const number = option.dataset['number'];
-    option.innerText = currentQuestion['choice' + number];
+    option.innerHTML = currentQuestion['choice' + number];
   });
 
   remainingQuestions.splice(questionNumber, 1);
@@ -166,7 +166,7 @@ options.forEach((option) => {
 
 const increaseScore = (number) => {
   userScore += number;
-  userScoreDisplay.innerText = userScore;
+  userScoreDisplay.innerHTML = userScore;
 };
 
 /* Update score and store in local storage */ 
