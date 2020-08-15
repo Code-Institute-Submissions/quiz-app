@@ -1,5 +1,6 @@
 
 /* Create constants */
+
 const question = document.querySelector('#question');
 const options = Array.from(document.querySelectorAll('.choice-text'));
 const counterDisplay = document.getElementById('counter');
@@ -201,9 +202,6 @@ const updateHighScore = () => {
   }
 
   highScoreRef = document.getElementById('highScoreID');
-
-  document.getElementById('highScoreID').innerHTML = highScoreStorage;
-
   highScoreRef.innerHTML = highScoreStorage;
   
 };
