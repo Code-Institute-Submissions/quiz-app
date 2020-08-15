@@ -96,7 +96,7 @@ $('.home-click').click(function() {
 const startQuiz = () => {
     counter = 0;
     userScore = 0;
-    remainingQuestions = [...questions]; // Copy all qs from question array using spread operator
+    remainingQuestions = [...questions];
     nextQuestion();
 };
 
