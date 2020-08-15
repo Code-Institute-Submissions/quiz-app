@@ -1,119 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
 
-/*  Element styles */ 
+/*  Element styles */
+
 html {
-    font-size: 16px;
-    overflow: hidden;
+	font-size: 16px;
+	overflow: hidden;
 }
 
 body {
-    background-color: #27496d;
-    font-family: 'Inconsolata', monospace;
-    color: #ffffff;
-    font-size: 1.2rem;
+	background-color: #27496d;
+	font-family: 'Inconsolata', monospace;
+	color: #ffffff;
+	font-size: 1.2rem;
 }
 
 h1 {
-    font-size: 1.4rem;
+	font-size: 1.4rem;
 }
 
 h2 {
-    font-size: 1.3rem;
+	font-size: 1.3rem;
 }
 
 a:hover {
-    background-color: #00909e;
+	background-color: #00909e;
 }
 
 form input {
-    color: #a9a9a9;
-    border: 0.2rem solid #ffffff;
-    text-decoration: none;
-    width: 12.5rem;
-    padding: 1rem;
-    margin: 0.5rem;
-    background-color: #ffffff;
-    font-size: 1rem;
-    font-family: 'Inconsolata', monospace;
-    text-align: center;
+	color: #a9a9a9;
+	border: 0.2rem solid #ffffff;
+	text-decoration: none;
+	width: 12.5rem;
+	padding: 1rem;
+	margin: 0.5rem;
+	background-color: #ffffff;
+	font-size: 1rem;
+	font-family: 'Inconsolata', monospace;
+	text-align: center;
 }
 
-/* Position styling */ 
+
+/* Position styling */
 
 .flex-container {
-    display: flex; 
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .center-columns {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-/* Class styles */ 
+
+/* Class styles */
 
 .button {
-    color: #ffffff;
-    border: 0.2rem solid #ffffff;
-    text-decoration: none;
-    width: 15rem;
-    padding: 1rem;
-    margin: 0.5rem;
-    background-color: #27496d;
-    font-family: 'Inconsolata', monospace;
-    font-size: 1.2rem;
+	color: #ffffff;
+	border: 0.2rem solid #ffffff;
+	text-decoration: none;
+	width: 15rem;
+	padding: 1rem;
+	margin: 0.5rem;
+	background-color: #27496d;
+	font-family: 'Inconsolata', monospace;
+	font-size: 1.2rem;
 }
 
 .container {
-    
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100vh;
 }
 
-
 .choice-container {
-    color: #ffffff;
-    border: 0.2rem solid #ffffff;
-    padding: 0.5rem;
-    margin: 0.7rem;
-    min-width: 50%;
+	color: #ffffff;
+	border: 0.2rem solid #ffffff;
+	padding: 0.5rem;
+	margin: 0.7rem;
+	min-width: 50%;
 }
 
 .choice-prefix {
-    padding: 0.2rem;
-   float: left;
+	padding: 0.2rem;
+	float: left;
 }
 
 .choice-text {
-    padding: 0.2;
-    width: 100%;
+	padding: 0.2;
+	width: 100%;
 }
 
 .choice-letter {
-    padding: 0 0.5rem;
-    font-weight: 800;
+	padding: 0 0.5rem;
+	font-weight: 800;
 }
 
 .right {
-    background-color: green;
+	background-color: green;
 }
 
 .wrong {
-    background-color: red;
+	background-color: red;
 }
 
 .show {
-    display: block;
+	display: block;
 }
 
 .hide {
-    display: none;
+	display: none;
 }
 
 .high-score {
@@ -121,83 +122,78 @@ form input {
 }
 
 .name {
-  display: inline-block;
-  width: 40%;
-  text-align: left;
-  padding: 5px;
-
+	display: inline-block;
+	width: 40%;
+	text-align: left;
+	padding: 5px;
 }
 
 .score {
-  display: inline-block;
-  width: 10%;
+	display: inline-block;
+	width: 10%;
 }
 
 .score-card {
-    margin: 5%;
-    max-width: 10%;
+	margin: 5%;
+	max-width: 10%;
 }
+
 
 /* ID styles*/
 
-
 #score-board {
-    background-color: #285582;
-    padding-top: 3rem;
-    color: white;
-    border: 1px solid #ffffff;
-    margin-bottom: 1rem;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
+	background-color: #285582;
+	padding-top: 3rem;
+	color: white;
+	border: 1px solid #ffffff;
+	margin-bottom: 1rem;
+	height: 40%;
+	display: flex;
+	flex-direction: column;
 }
 
 #scoresList {
-    list-style: none;
-
+	list-style: none;
 }
 
 .icon {
-    width: 40%;
-    margin: 5px auto;
+	width: 40%;
+	margin: 5px auto;
+}
+
+#game-page,
+#submit-page,
+#high-score-page {
+	display: none;
 }
 
 
-#game-page, #submit-page, #high-score-page {
-    display: none;
-}
+/* Media Queries */
 
-/* Media Queries */ 
+
 /* Extra small devices (phones, 600px and down) */
+
 @media only screen and (max-width: 600px) {
-    .choice-container {
-        min-width: 80%;
-        padding: 0;
-    }
-
-    
-    .container {
-        padding: 3%;
-    }
-
-    body {
-    font-size: 1rem;
-    }
-
-    h1 {
-    font-size: 1.2rem;
-    }
-
-    h2 {
-    font-size: 1.1rem;
-    }
-
+	.choice-container {
+		min-width: 80%;
+		padding: 0;
+	}
+	.container {
+		padding: 3%;
+	}
+	body {
+		font-size: 1rem;
+	}
+	h1 {
+		font-size: 1.2rem;
+	}
+	h2 {
+		font-size: 1.1rem;
+	}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-     .choice-container {
+    .choice-container {
         min-width: 80%;
     }
-
 }
-
