@@ -1,87 +1,76 @@
 <!doctype html>
-
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Quiz</title>
-  <link rel="stylesheet" href="assets/style.css">
-  
-</head>
-
-<body>
-
-<!--Start Game  -->
-<div id="start-page">
-    <div class="container">
-        <h1>Quiz</h1>
-        <h2>Can you rise to the challenge?</h2>
-        <a class="button" id="start-game-click">Start</a>
-    </div>
-</div>
-<!--End Start Game  -->
-
-<!--Play Game -->
-
-<div id="game-page">
-    <div class="container">
-        <div id="game-info">
-          <div class="info-card">
-            <p class="info-type">
-              Question
-            </p>
-            <h1 class="info-text" id="counter"></h1>
-          </div>
-          <div class="info-card">
-            <p class="info-type">
-              Score
-            </p>
-            <h1 class="info-text" id="userScore">
-              0
-            </h1>
-          </div>
-        </div>
-        <h2 id="question">What is the answer to this question?</h2>
-        <div class="choice-container">
-          <p class="choice-text" data-number="1">Option 1</p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-text" data-number="2">Option 2</p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-text" data-number="3">Option 3</p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-text" data-number="4">Option 4</p>
-        </div>
-    </div>
-</div>
-
-<!--End Play Game-->
-
-<!-- Game Score -->
-<div id="score-page">
-    <div class="container">
-        <div class="flex-container">
-            <div class="score-card">
-                <img src="assets/images/game-icon.png" class="icon" alt="white trophy icon">
-                <h1>Game Score</h1>
-                <h1 id="lastScore"></h1>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Quiz</title>
+      <link rel="stylesheet" href="assets/style.css">
+   </head>
+   <body>
+      <!--Start Game  -->
+      <div id="start-page">
+         <div class="container">
+            <h1>Quiz</h1>
+            <h2>Can you rise to the challenge?</h2>
+            <a class="button" id="start-game-click">Start</a>
+         </div>
+      </div>
+      <!--End Start Game  -->
+      <!--Play Game -->
+      <div id="game-page">
+         <div class="container">
+            <div id="game-info">
+               <div class="info-card">
+                  <p class="info-type">
+                     Question
+                  </p>
+                  <h1 class="info-text" id="counter"></h1>
+               </div>
+               <div class="info-card">
+                  <p class="info-type">
+                     Score
+                  </p>
+                  <h1 class="info-text" id="userScore">
+                     0
+                  </h1>
+               </div>
             </div>
-            <div class="score-card">
-                <img src="assets/images/high-score-icon.png" class="icon" alt="white trophy icon">
-                <h2>High Score</h2>
-                <h1 id="highScoreID"></h1>
+            <h2 id="question">What is the answer to this question?</h2>
+            <div class="choice-container">
+               <p class="choice-text" data-number="1">Option 1</p>
             </div>
-        </div>
-        <a class="button home-click">Home</a>
-    </div>
-</div>
-<!-- End Game Score -->
-
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<script src="assets/script.js"></script>
-</body>
+            <div class="choice-container">
+               <p class="choice-text" data-number="2">Option 2</p>
+            </div>
+            <div class="choice-container">
+               <p class="choice-text" data-number="3">Option 3</p>
+            </div>
+            <div class="choice-container">
+               <p class="choice-text" data-number="4">Option 4</p>
+            </div>
+         </div>
+      </div>
+      <!--End Play Game-->
+      <!-- Game Score -->
+      <div id="score-page">
+         <div class="container">
+            <div class="flex-container">
+               <div class="score-card">
+                  <img src="assets/images/game-icon.png" class="icon" alt="white trophy icon">
+                  <h1>Game Score</h1>
+                  <h1 id="lastScore"></h1>
+               </div>
+               <div class="score-card">
+                  <img src="assets/images/high-score-icon.png" class="icon" alt="white trophy icon">
+                  <h2>High Score</h2>
+                  <h1 id="highScoreID"></h1>
+               </div>
+            </div>
+            <a class="button home-click">Home</a>
+         </div>
+      </div>
+      <!-- End Game Score -->
+      <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <script src="assets/script.js"></script>
+   </body>
 </html>
-
