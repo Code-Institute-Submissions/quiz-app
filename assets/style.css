@@ -11,7 +11,8 @@ body {
 	background-color: #27496d;
 	font-family: 'Inconsolata', monospace;
 	color: #ffffff;
-	font-size: 1.2rem;
+	font-size: 1.2rem;#
+    height: 100vh;
 }
 
 h1 {
@@ -139,7 +140,7 @@ form input {
 
 .score-card {
 	margin: 5%;
-	max-width: 10%;
+	max-width: 20%;
     text-align: center;
 }
 
@@ -202,6 +203,15 @@ form input {
 	display: flex;
 	justify-content: space-around;
     text-align: center;
+    }
+    .choice-container {
+	color: #ffffff;
+	border: 0.2rem solid #ffffff;
+	padding: 0.2rem;
+	margin: 0.3rem;
+}
+    .button {
+    padding: 0.4rem;
     }
 } 
 	
