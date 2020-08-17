@@ -20,6 +20,7 @@ let counter = 0;
 let remainingQuestions = [];
 let questions = [];
 
+
 /* Fetch questions from API */
 
 fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple')
@@ -174,7 +175,7 @@ const readLocalStorage = () => {
     if (savedHighScore) {
         console.log('something in storage');
         highScore = savedHighScore;
-        console.log("highScore");
+        console.log(highScore);
     } else {
         console.log("nothing stored, set to 0");
         highScore = 0;
@@ -182,11 +183,15 @@ const readLocalStorage = () => {
     }
     return;
 };
+
 const updateHighScore = () => {
-    if (userScore >= highScore) {
+    if (userScore > highScore) {
+        console.log(userScore);
         console.log(highScore);
         console.log('higher than high score');
+        highScore = userScore;
         localStorage.setItem('highScoreStorage', userScore);
+        console.log(highScore);
         return;
     } else {
         console.log('Not higher than high score');
@@ -195,6 +200,7 @@ const updateHighScore = () => {
     highScoreRef = document.getElementById('highScoreID');
     highScoreRef.innerHTML = highScoreStorage;
 };
+
 const updateScoreStorage = () => {
     document.getElementById('highScoreID').innerHTML = highScore;
 };
