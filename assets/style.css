@@ -140,6 +140,7 @@ form input {
 .score-card {
 	margin: 5%;
 	max-width: 10%;
+    text-align: center;
 }
 
 
@@ -196,7 +197,13 @@ form input {
 	}
     .icon {
 	width: 80%;
-}
+    }
+    .flex-container {
+	display: flex;
+	justify-content: space-around;
+    text-align: center;
+    }
+} 
 	
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
