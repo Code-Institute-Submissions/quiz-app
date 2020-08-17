@@ -178,7 +178,13 @@ form input {
 /* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px) {
-	.choice-container {
+	h1 {
+		font-size: 1.2rem;
+	}
+	h2 {
+		font-size: 1.1rem;
+	}
+    .choice-container {
 		min-width: 80%;
 		padding: 0;
 	}
@@ -188,12 +194,10 @@ form input {
 	body {
 		font-size: 1rem;
 	}
-	h1 {
-		font-size: 1.2rem;
-	}
-	h2 {
-		font-size: 1.1rem;
-	}
+    .icon {
+	width: 80%;
+}
+	
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
